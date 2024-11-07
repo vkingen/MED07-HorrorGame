@@ -164,7 +164,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.HFPS-1.6.3b
+    Standalone: com.DefaultCompany.MED07-HorrorGame-Builtin
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -915,12 +915,12 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: bf43e636-450e-4567-b11f-6f70ecc7a510
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: MED07-HorrorGame_Builtin
   organizationId: lasseviking
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
