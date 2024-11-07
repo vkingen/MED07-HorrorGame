@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1649993f44d79ed42a3d427f734ccf6e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Root Motion/Mutant_Run.anim
+  uploadId: 527297

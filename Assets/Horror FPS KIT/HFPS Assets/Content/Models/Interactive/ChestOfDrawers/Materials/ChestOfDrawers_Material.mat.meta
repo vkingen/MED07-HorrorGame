@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4f21dbc42899df447886778b2fbacb31
+timeCreated: 1502131651
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Models/Interactive/ChestOfDrawers/Materials/ChestOfDrawers_Material.mat
+  uploadId: 527297

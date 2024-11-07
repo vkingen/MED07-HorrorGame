@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 854588ebc5b4e604da07f0507fcf11cc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/UI/Blinking/BlinkingAnimator.controller
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 60dac948c62b91c4f9de6d27f2cf1c90
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Idle/zombie_idle_agressive.anim
+  uploadId: 527297

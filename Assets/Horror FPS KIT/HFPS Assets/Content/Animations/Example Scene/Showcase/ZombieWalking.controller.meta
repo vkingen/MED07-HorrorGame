@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 70b26cc27a0020b4da9e8e07f9aaf2d3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Example Scene/Showcase/ZombieWalking.controller
+  uploadId: 527297

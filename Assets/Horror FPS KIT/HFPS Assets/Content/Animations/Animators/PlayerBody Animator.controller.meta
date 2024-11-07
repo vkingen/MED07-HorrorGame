@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4e6ced365a862ea42961a52536e6482f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Animators/PlayerBody
+    Animator.controller
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2d3dfdc2eb59eb8428dd7f9faed74bc4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Idle/zombie_patrol.anim
+  uploadId: 527297

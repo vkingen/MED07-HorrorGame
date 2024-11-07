@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 528a9cc7d4617a549adc34ae2407b0ce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Attack/zombie_attack_righthand.anim
+  uploadId: 527297

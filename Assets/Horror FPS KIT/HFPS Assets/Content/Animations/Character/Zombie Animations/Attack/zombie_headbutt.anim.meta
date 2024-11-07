@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 72a7a40bc4858dc42ab4c0d6f11b4b29
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Attack/zombie_headbutt.anim
+  uploadId: 527297

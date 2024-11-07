@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 30c5b61b222cfb64c8e34b1d30245778
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Idle/zombie_standup_back.anim
+  uploadId: 527297

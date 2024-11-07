@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdfa936802d8ac4459b9ccce2e2bb84c
+timeCreated: 1448315744
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Player/CameraWalk.anim
+  uploadId: 527297

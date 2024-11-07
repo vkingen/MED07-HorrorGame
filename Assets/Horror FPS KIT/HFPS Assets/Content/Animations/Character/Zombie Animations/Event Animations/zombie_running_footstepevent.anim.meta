@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 08011586f2194fc4e851ec6db6dc8d96
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Event Animations/zombie_running_footstepevent.anim
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fe19aefbe5f5d9c489dc430b076c1db3
+timeCreated: 1496433503
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/UI/HeartBeat.anim
+  uploadId: 527297

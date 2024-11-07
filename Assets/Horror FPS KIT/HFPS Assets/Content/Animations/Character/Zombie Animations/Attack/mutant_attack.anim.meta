@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3e6829ec5deb23a48a2fbd2035e2331c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/Attack/mutant_attack.anim
+  uploadId: 527297

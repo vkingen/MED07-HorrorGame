@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8e56283270ad7de4183923250e410018
+timeCreated: 1483559651
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Interact/LightSwitch/LightSwitchOn.anim
+  uploadId: 527297

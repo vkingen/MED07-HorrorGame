@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd6986f813a9abe4da4083e4eea12125
+timeCreated: 1448315744
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Player/CameraRun.anim
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9e4116648d9c2c14fba0458ba4f2043b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/PlayerBody
+    Animations/JumpArms.anim
+  uploadId: 527297

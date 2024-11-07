@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 101aa8d048e900c478c6784011af9e40
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Animators/ZombieAnimator_01.controller
+  uploadId: 527297

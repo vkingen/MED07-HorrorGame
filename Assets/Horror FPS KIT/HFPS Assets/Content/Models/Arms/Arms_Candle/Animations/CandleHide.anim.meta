@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0f9178e478232c747a6608aa03df5c47
+timeCreated: 1515607124
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Models/Arms/Arms_Candle/Animations/CandleHide.anim
+  uploadId: 527297

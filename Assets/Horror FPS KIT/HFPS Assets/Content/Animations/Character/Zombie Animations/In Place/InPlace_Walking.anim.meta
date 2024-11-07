@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 38c981611c4b54d41ad5c42c533b886c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/Zombie
+    Animations/In Place/InPlace_Walking.anim
+  uploadId: 527297

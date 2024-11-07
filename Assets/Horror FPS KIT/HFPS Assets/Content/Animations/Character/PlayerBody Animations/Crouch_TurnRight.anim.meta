@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 046c34d49531de04abfc858d3349b649
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Animations/Character/PlayerBody
+    Animations/Crouch_TurnRight.anim
+  uploadId: 527297
