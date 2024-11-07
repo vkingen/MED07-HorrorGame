@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class DraggableObjectNew : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class DraggableObjectNew : MonoBehaviour
     // Boundary within which the object can be dragged
     public BoxCollider dragBoundary;
 
+    // Speed at which the object follows the mouse position (lower values create more delay)
+    public float followSpeed = 10f;
+
+    // Duration for smooth return to original position
+    public float returnSpeed = 5f;  // Adjust this value to control return speed
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -22,33 +29,29 @@ public class DraggableObjectNew : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // Calculate the offset between the object position and the mouse position
+        StopAllCoroutines();  // Stop any ongoing movement back to original position
         offset = transform.position - GetMouseWorldPosition();
         isDragging = true;
 
-        // Clear the current drop zone's occupying object if we're picking it up
         if (currentDropZone != null)
         {
             currentDropZone.ClearOccupyingObject();
-            currentDropZone = null; // Clear the current reference
+            currentDropZone = null;
         }
     }
 
-    private void OnMouseDrag()
+    private void Update()
     {
         if (isDragging)
         {
-            // Calculate the new position based on the mouse position plus the offset
-            Vector3 newPosition = GetMouseWorldPosition() + offset;
+            Vector3 targetPosition = GetMouseWorldPosition() + offset;
 
-            // Clamp the position to stay within the boundary
             if (dragBoundary != null)
             {
-                newPosition = ClampPositionToBoundary(newPosition, dragBoundary);
+                targetPosition = ClampPositionToBoundary(targetPosition, dragBoundary);
             }
 
-            // Update the object's position
-            transform.position = newPosition;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
         }
     }
 
@@ -56,26 +59,21 @@ public class DraggableObjectNew : MonoBehaviour
     {
         isDragging = false;
 
-        // Check if the object is over a valid drop zone and if it is unoccupied
         if (currentDropZone != null && !currentDropZone.IsOccupied && currentDropZone.CanAcceptObject(this))
         {
-            // Snap the object to the center of the drop zone
             transform.position = currentDropZone.transform.position;
-            transform.rotation = currentDropZone.transform.rotation; // Optionally reset rotation
-
-            // Set this object as the occupying object for the drop zone
+            transform.rotation = currentDropZone.transform.rotation;
             currentDropZone.SetOccupyingObject(this);
         }
         else
         {
-            // Return to the original position if not over an unoccupied drop zone
-            transform.position = originalPosition;
+            // Start smooth return to original position
+            StartCoroutine(SmoothReturnToOriginalPosition());
         }
     }
 
     private Vector3 GetMouseWorldPosition()
     {
-        // Get the mouse position in world space
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mainCamera.WorldToScreenPoint(transform.position).z;
         return mainCamera.ScreenToWorldPoint(mousePoint);
@@ -83,11 +81,9 @@ public class DraggableObjectNew : MonoBehaviour
 
     private Vector3 ClampPositionToBoundary(Vector3 position, BoxCollider boundary)
     {
-        // Get the min and max bounds of the BoxCollider
         Vector3 minBounds = boundary.bounds.min;
         Vector3 maxBounds = boundary.bounds.max;
 
-        // Clamp the position to within the bounds
         position.x = Mathf.Clamp(position.x, minBounds.x, maxBounds.x);
         position.y = Mathf.Clamp(position.y, minBounds.y, maxBounds.y);
         position.z = Mathf.Clamp(position.z, minBounds.z, maxBounds.z);
@@ -97,12 +93,10 @@ public class DraggableObjectNew : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the collider we entered is a drop zone
         if (other.CompareTag("DropZone"))
         {
             DropZone dropZone = other.GetComponent<DropZone>();
 
-            // Only set as the current drop zone if it's unoccupied and matches object type
             if (dropZone != null && !dropZone.IsOccupied && dropZone.CanAcceptObject(this))
             {
                 currentDropZone = dropZone;
@@ -112,20 +106,35 @@ public class DraggableObjectNew : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the collider we exited is the current drop zone
         if (other.CompareTag("DropZone") && currentDropZone == other.GetComponent<DropZone>())
         {
-            // Clear the reference to the drop zone and remove this object as occupant
             currentDropZone = null;
         }
     }
 
     private void OnDisable()
     {
-        // Clear the drop zone’s reference if this object is destroyed or disabled
         if (currentDropZone != null)
         {
             currentDropZone.ClearOccupyingObject();
         }
+    }
+
+    // Coroutine to smoothly return to original position
+    private IEnumerator SmoothReturnToOriginalPosition()
+    {
+        float elapsedTime = 0f;
+        Vector3 startPosition = transform.position;
+
+        // Smoothly move back to the original position over time
+        while (elapsedTime < 1f)
+        {
+            transform.position = Vector3.Lerp(startPosition, originalPosition, elapsedTime);
+            elapsedTime += Time.deltaTime * returnSpeed;  // Increase elapsed time based on speed
+            yield return null;
+        }
+
+        // Ensure exact position at the end
+        transform.position = originalPosition;
     }
 }
