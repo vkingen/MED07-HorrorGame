@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5c2a667a952077347b50b4dc5c1e67ec
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Triggers/DamageOverTime.cs
+  uploadId: 527297

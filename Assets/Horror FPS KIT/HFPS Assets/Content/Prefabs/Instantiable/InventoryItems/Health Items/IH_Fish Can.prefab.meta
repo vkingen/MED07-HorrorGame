@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9af7804dde023a54db7a1a68c64456aa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/InventoryItems/Health
+    Items/IH_Fish Can.prefab
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8a25c3eda2c7692459d9b5069e7d679c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Shaders/GlassStainedBumpDistort.shader
+  uploadId: 527297

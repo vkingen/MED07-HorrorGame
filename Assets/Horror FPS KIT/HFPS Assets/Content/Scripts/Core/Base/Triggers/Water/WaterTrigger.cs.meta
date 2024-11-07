@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: db8722225b0682643a6b413d82e21b7b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Triggers/Water/WaterTrigger.cs
+  uploadId: 527297

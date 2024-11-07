@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f815cd2b8bfaba4ea086cf356a75aff
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Interactive/Inventory/Item
+    Containers/Dufflebag_FixedContainer.prefab
+  uploadId: 527297

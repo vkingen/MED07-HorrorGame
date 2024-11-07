@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 3d9645bf0cee1734a90fe411e371abe7
+timeCreated: 1491499404
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/!Managers/Main
+    Scripts/JumpscareEffects.cs
+  uploadId: 527297

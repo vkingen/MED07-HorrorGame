@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d8583c920f7c96a42b0e9d82f26a9ce7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Water/WaterWaves.cs
+  uploadId: 527297

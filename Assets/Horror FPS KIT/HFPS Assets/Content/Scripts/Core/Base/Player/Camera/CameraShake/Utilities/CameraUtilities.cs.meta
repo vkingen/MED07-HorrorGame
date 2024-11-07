@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5eebeb0be12630947983c46c4641a0b5
+labels:
+- Shake
+- Camera
+- Effect
+- Follow
+- Animation
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Player/Camera/CameraShake/Utilities/CameraUtilities.cs
+  uploadId: 527297

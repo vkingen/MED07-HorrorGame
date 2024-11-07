@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9c075f1c4000221409f98d4032b925a8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Interactive/VHS/VHS
+    Player.prefab
+  uploadId: 527297

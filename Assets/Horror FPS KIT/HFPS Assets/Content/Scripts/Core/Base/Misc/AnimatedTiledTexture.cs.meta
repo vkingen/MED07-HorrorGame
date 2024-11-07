@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 6a3108f403e766a48908dcddbd28a28c
+timeCreated: 1514567947
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Misc/AnimatedTiledTexture.cs
+  uploadId: 527297

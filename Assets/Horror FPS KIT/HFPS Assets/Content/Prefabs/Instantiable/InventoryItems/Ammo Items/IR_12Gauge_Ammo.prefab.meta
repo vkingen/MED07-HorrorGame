@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 02810956a7c7cbb42a2c4e9093ff9d78
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/InventoryItems/Ammo
+    Items/IR_12Gauge_Ammo.prefab
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bbc9ba64b52dae74bafcf4803d58bbf7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Resources/Blur.shader
+  uploadId: 527297

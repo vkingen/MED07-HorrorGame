@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb9143fc03eb54447ad6fbed4af6c990
+timeCreated: 1505071646
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Environment/Props/Antique/AntiqueChair.prefab
+  uploadId: 527297

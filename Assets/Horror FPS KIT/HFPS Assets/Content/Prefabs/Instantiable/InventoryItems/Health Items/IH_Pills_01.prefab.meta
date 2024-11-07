@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ca5d0c60a0f6c04e9e03f4923cfdca4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/InventoryItems/Health
+    Items/IH_Pills_01.prefab
+  uploadId: 527297

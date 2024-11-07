@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eda61d508cfbb0d4a8e4305ae2a08296
+timeCreated: 1500827303
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Models/Props/_Packs/Pictures_Pack/GoldFrame/Materials/Frame_Picture.mat
+  uploadId: 527297

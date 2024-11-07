@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: eed7cfb087687dc4a85d7d5dcb1ec848
+timeCreated: 1448110380
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Water/Collections/MinHeap.cs
+  uploadId: 527297

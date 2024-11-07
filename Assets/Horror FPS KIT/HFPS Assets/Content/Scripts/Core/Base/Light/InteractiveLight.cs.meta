@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: af5fb8a2112111a4a8b883f6a7edcb5d
+timeCreated: 1483628767
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Light/InteractiveLight.cs
+  uploadId: 527297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d1941358163946f4798d2d791740ba7a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Shaders/UIBlurEffect/UIGaussianBlur.shader
+  uploadId: 527297

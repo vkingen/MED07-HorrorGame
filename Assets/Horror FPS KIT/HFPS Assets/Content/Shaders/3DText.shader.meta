@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e6601ad7a2b13e346b8903522e7b9318
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Shaders/3DText.shader
+  uploadId: 527297

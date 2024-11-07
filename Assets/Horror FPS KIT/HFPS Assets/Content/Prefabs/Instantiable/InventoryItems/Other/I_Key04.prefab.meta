@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f0910e4bfb4eb442a80c6d599d471fd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/InventoryItems/Other/I_Key04.prefab
+  uploadId: 527297

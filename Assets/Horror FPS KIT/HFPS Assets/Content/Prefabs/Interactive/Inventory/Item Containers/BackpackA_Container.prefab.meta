@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43a5494a50e957543b7e840e4611bef7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Interactive/Inventory/Item
+    Containers/BackpackA_Container.prefab
+  uploadId: 527297

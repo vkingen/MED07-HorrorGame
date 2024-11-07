@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4fcc8dea751388a4cb20ad6e753632c7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/InventoryItems/Health
+    Items/IH_FirstAidKit.prefab
+  uploadId: 527297

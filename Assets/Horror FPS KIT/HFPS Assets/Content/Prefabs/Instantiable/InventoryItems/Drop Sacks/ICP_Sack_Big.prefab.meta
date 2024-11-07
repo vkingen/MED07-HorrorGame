@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b0361dfa72b7f844ebc723879118657e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/InventoryItems/Drop
+    Sacks/ICP_Sack_Big.prefab
+  uploadId: 527297

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd1f55eb9aac6474dbc56a121d11a4d8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Example Scenes/ScenePresistency/SavingScene02/LightingData.asset
+  uploadId: 527297

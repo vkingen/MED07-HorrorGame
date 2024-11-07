@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6d7a23e3f9f352c48ac4db02b1685849
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Interactive/CCTV/CCTV
+    Camera.prefab
+  uploadId: 527297

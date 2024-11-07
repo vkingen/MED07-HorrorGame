@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 464c6fbbc066ae6409863d0970049078
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/UI/GameUI/HintControlTip.prefab
+  uploadId: 527297

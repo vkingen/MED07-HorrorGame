@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6bbf4199e0ee71245a52e1920c0d6482
+timeCreated: 1448211102
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Core/Base/Water/Utils/MathfUtils.cs
+  uploadId: 527297

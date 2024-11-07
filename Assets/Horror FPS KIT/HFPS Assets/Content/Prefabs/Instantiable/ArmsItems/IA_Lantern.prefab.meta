@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9dba05ac0cfb0634eb1331823de3a6cb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Instantiable/ArmsItems/IA_Lantern.prefab
+  uploadId: 527297

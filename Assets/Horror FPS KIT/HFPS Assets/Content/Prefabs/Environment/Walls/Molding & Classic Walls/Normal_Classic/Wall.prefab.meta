@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: da50c1f185bc38b449bb74dad975dcb9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Prefabs/Environment/Walls/Molding
+    & Classic Walls/Normal_Classic/Wall.prefab
+  uploadId: 527297

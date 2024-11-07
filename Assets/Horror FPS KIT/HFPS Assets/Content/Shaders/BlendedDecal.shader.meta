@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cd9eb58985f95d649a8a0c51de91348e
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Shaders/BlendedDecal.shader
+  uploadId: 527297

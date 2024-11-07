@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d39fc2116bac4c545ab9cc6a5dc0dadf
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Shaders/InvisibleShadowCaster.shader
+  uploadId: 527297

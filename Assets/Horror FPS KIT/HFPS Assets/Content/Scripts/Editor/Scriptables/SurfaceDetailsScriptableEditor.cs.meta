@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 35197d6a49008a446ac7222dcb87b359
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82643
+  packageName: Horror FPS KIT
+  packageVersion: 1.6.3c
+  assetPath: Assets/Horror FPS KIT/HFPS Assets/Content/Scripts/Editor/Scriptables/SurfaceDetailsScriptableEditor.cs
+  uploadId: 527297
