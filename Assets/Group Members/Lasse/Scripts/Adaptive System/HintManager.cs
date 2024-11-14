@@ -6,9 +6,7 @@ public class HintManager : MonoBehaviour
     public PlayerProgressTracker playerProgressTracker;
     public Transform player;
     public float hintThreshold = 10f; // Time before triggering a hint
-    public float hintCooldown = 10f; // Cooldown between hints
 
-    private float hintCooldownTimer = 0f;
     private List<HintEvent> hintEvents = new List<HintEvent>();
 
     private void Start()
@@ -19,15 +17,7 @@ public class HintManager : MonoBehaviour
 
     private void Update()
     {
-        // Update cooldown timer
-        if (hintCooldownTimer > 0f)
-        {
-            hintCooldownTimer -= Time.deltaTime;
-        }
-        else
-        {
-            CheckForHintTrigger();
-        }
+        CheckForHintTrigger();
     }
 
     private void CheckForHintTrigger()
@@ -40,7 +30,6 @@ public class HintManager : MonoBehaviour
             {
                 closestEvent.TriggerEvent();
                 playerProgressTracker.ResetTimer(); // Reset the timer since a hint was given
-                hintCooldownTimer = hintCooldown; // Start cooldown
             }
         }
     }
