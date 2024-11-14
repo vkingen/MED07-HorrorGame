@@ -15,6 +15,7 @@ namespace HFPS.Systems
 {
     public class InteractiveItem : MonoBehaviour, ISaveable
     {
+        
         #region Structures
         [Serializable]
         public sealed class MessageTip
@@ -34,6 +35,8 @@ namespace HFPS.Systems
 
         public ItemData itemData;
         public string itemTitle;
+
+        
 
         public ItemType itemType = ItemType.GenericItem;
         public ExamineType examineType = ExamineType.None;
@@ -102,6 +105,9 @@ namespace HFPS.Systems
         public AudioClip examineSound;
         public float examineVolume = 1f;
 
+        public bool isClueItem = true;
+        public bool clueHasBeenExamined = false;
+
         [Tooltip("Object face to camera rotation.")]
         public Vector3 faceRotation;
         [Tooltip("Inventory item custom data.")]
@@ -122,6 +128,7 @@ namespace HFPS.Systems
 
         private AudioSource audioSource;
         private string objectParentPath;
+
 
         void Awake()
         {

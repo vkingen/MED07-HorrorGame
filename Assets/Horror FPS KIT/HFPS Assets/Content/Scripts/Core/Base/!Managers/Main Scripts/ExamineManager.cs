@@ -593,6 +593,7 @@ namespace HFPS.Player
 
         void FirstPhase()
         {
+            
             StartCoroutine(AntiSpam());
 
             priorityObject = firstExamine;
@@ -601,6 +602,17 @@ namespace HFPS.Player
             objectRotation = objectHeld.transform.rotation;
 
             isPaper = firstExamine.examineType == InteractiveItem.ExamineType.Paper;
+
+            if(firstExamine.isClueItem)
+            {
+                if (!firstExamine.clueHasBeenExamined)
+                {
+                    Debug.Log("EXAMINED MEGA");
+                    EventClue eventClue = firstExamine.gameObject.GetComponentInChildren<EventClue>();
+                    eventClue.ResetHintTimer();
+                    firstExamine.clueHasBeenExamined = true;
+                }
+            }
 
             if (examineLight)
             {
@@ -1001,6 +1013,7 @@ namespace HFPS.Player
 
         void ShowExamineText(InteractiveItem IntItem, bool PlaySound = true, bool ExamineOthers = true)
         {
+            
             if (!string.IsNullOrEmpty(IntItem.examineTitle))
             {
                 gameManager.isExamining = true;
@@ -1034,6 +1047,7 @@ namespace HFPS.Player
 
             if (examinedSound && PlaySound && !IntItem.isExamined)
             {
+                
                 Utilities.PlayOneShot2D(transform.position, examinedSound, examinedVolume);
             }
 
@@ -1042,6 +1056,7 @@ namespace HFPS.Player
                 foreach (var inst in examineItems)
                 {
                     inst.isExamined = true;
+                    
                 }
             }
         }
