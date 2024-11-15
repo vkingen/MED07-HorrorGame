@@ -23,6 +23,11 @@ public class PlayerProgressTracker : MonoBehaviour
         trackingTime = false;
     }
 
+    public void AddToTimer(float timeToAdd)
+    {
+        totalTimeWithoutClue -= timeToAdd;
+    }
+
     public void ResetTimer()
     {
         totalTimeWithoutClue = 0f;

@@ -14,6 +14,7 @@ namespace HFPS.Editors
         private readonly bool[] foldout = new bool[5];
 
         private SerializedProperty m_itemType;
+        private SerializedProperty m_clueState;
         private SerializedProperty m_examineType;
         private SerializedProperty m_examineRotate;
         private SerializedProperty m_messageType;
@@ -65,6 +66,7 @@ namespace HFPS.Editors
         private void OnEnable()
         {
             m_itemType = serializedObject.FindProperty("itemType");
+            m_clueState = serializedObject.FindProperty("clueState");
             m_examineType = serializedObject.FindProperty("examineType");
             m_examineRotate = serializedObject.FindProperty("examineRotate");
             m_messageType = serializedObject.FindProperty("messageType");
@@ -122,6 +124,7 @@ namespace HFPS.Editors
             serializedObject.Update();
 
             InteractiveItem.ItemType itemType = (InteractiveItem.ItemType)m_itemType.enumValueIndex;
+            InteractiveItem.ClueState clueState = (InteractiveItem.ClueState)m_clueState.enumValueIndex;
             InteractiveItem.ExamineType examineType = (InteractiveItem.ExamineType)m_examineType.enumValueIndex;
             InteractiveItem.MessageType messageType = (InteractiveItem.MessageType)m_messageType.enumValueIndex;
 
@@ -136,6 +139,7 @@ namespace HFPS.Editors
             }
 
             EditorGUILayout.PropertyField(m_itemType);
+            EditorGUILayout.PropertyField(m_clueState);
 
             if (itemType != InteractiveItem.ItemType.BackpackExpand)
                 EditorGUILayout.PropertyField(m_examineType);

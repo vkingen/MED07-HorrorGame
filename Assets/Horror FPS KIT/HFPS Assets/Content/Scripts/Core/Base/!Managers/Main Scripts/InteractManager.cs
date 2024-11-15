@@ -403,6 +403,26 @@ namespace HFPS.Player
 
             if (interactiveItem)
             {
+                if (interactiveItem.clueState == InteractiveItem.ClueState.clue)
+                {
+                    
+                    if (interactiveItem.gameObject.GetComponentInChildren<EventClue>() != null)
+                    {
+                        EventClue eventClue = interactiveItem.gameObject.GetComponentInChildren<EventClue>();
+                        eventClue.ChangeTimer();
+                    }
+                }
+                else if (interactiveItem.clueState == InteractiveItem.ClueState.hint)
+                {
+                    if (interactiveItem.gameObject.GetComponentInChildren<EventClue>() != null)
+                    {
+                        EventClue eventClue = interactiveItem.gameObject.GetComponentInChildren<EventClue>();
+                        eventClue.ChangeTimer();
+                    }
+                }
+
+
+
                 Item item = new Item();
                 bool showMessage = true;
                 string autoShortcut = string.Empty;
