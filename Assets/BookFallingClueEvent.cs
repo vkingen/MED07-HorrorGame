@@ -16,19 +16,9 @@ public class BookFallingClueEvent : MonoBehaviour
         rigidbody = book.GetComponent<Rigidbody>();
     }
 
-    private void Start()
-    {
-        //PerformEvent();
-    }
 
     private void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.K))
-        //{
-        //    PerformEvent();
-        //}
-
-
         if(isEventActivated)
             CheckForBookVelocity();
     }
