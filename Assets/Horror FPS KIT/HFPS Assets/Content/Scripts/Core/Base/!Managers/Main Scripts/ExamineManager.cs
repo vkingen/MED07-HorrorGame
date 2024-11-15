@@ -593,6 +593,7 @@ namespace HFPS.Player
 
         void FirstPhase()
         {
+            
             StartCoroutine(AntiSpam());
 
             priorityObject = firstExamine;
@@ -601,6 +602,41 @@ namespace HFPS.Player
             objectRotation = objectHeld.transform.rotation;
 
             isPaper = firstExamine.examineType == InteractiveItem.ExamineType.Paper;
+
+            if(firstExamine.clueState == InteractiveItem.ClueState.clue)
+            {
+                if (!firstExamine.clueHasBeenExamined)
+                {
+                    PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
+                    if(tracker != null)
+                    {
+                        tracker.StopTracking();
+                    }
+                    if (firstExamine.gameObject.GetComponentInChildren<EventClue>() != null)
+                    {
+                        EventClue eventClue = firstExamine.gameObject.GetComponentInChildren<EventClue>();
+                        eventClue.ResetTimer();
+                        firstExamine.clueHasBeenExamined = true;
+                    }
+                }
+            }
+            else if (firstExamine.clueState == InteractiveItem.ClueState.hint)
+            {
+                if (!firstExamine.clueHasBeenExamined)
+                {
+                    PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
+                    if (tracker != null)
+                    {
+                        tracker.StopTracking();
+                    }
+                    if (firstExamine.gameObject.GetComponentInChildren<EventClue>() != null)
+                    {
+                        EventClue eventClue = firstExamine.gameObject.GetComponentInChildren<EventClue>();
+                        eventClue.ChangeTimer();
+                        firstExamine.clueHasBeenExamined = true;
+                    }
+                }
+            }
 
             if (examineLight)
             {
@@ -825,6 +861,12 @@ namespace HFPS.Player
 
         void DropObject()
         {
+            Debug.Log("STOPPING EXAMENING");
+            PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
+            if (tracker != null)
+            {
+                tracker.StartTracking();
+            }
             firstExamine.gameObject.SendMessage("OnEndExamine", SendMessageOptions.DontRequireReceiver);
 
             SetFloatingIconsVisible(true);
@@ -1001,6 +1043,7 @@ namespace HFPS.Player
 
         void ShowExamineText(InteractiveItem IntItem, bool PlaySound = true, bool ExamineOthers = true)
         {
+            
             if (!string.IsNullOrEmpty(IntItem.examineTitle))
             {
                 gameManager.isExamining = true;
@@ -1034,6 +1077,7 @@ namespace HFPS.Player
 
             if (examinedSound && PlaySound && !IntItem.isExamined)
             {
+                
                 Utilities.PlayOneShot2D(transform.position, examinedSound, examinedVolume);
             }
 
@@ -1042,6 +1086,7 @@ namespace HFPS.Player
                 foreach (var inst in examineItems)
                 {
                     inst.isExamined = true;
+                    
                 }
             }
         }
