@@ -8,7 +8,7 @@ public class RoomTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //HintManager.Instance.SetCurrentRoom(roomName); // Update the current room in the HintManager
+            HintManager.Instance.SetCurrentRoom(roomName); // Update the current room in the HintManager
         }
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class HintEvent : MonoBehaviour
 {
+    public string roomName;
     public bool isTriggered = false; // Flag to avoid retriggering
     public UnityEvent eventToTrigger;
 
