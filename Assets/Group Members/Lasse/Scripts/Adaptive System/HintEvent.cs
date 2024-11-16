@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class HintEvent : MonoBehaviour
 {
-    public string eventName; // Name for identification
+    public string roomName;
     public bool isTriggered = false; // Flag to avoid retriggering
     public UnityEvent eventToTrigger;
 
@@ -12,7 +12,7 @@ public class HintEvent : MonoBehaviour
         if (isTriggered) return;
 
         isTriggered = true;
-        Debug.Log($"Hint Event Triggered: {eventName}");
+        Debug.Log($"Hint Event Triggered: {transform.name}");
 
         PerformHintEffect();
     }
