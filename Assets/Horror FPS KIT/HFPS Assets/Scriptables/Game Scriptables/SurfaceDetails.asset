@@ -18,7 +18,10 @@ MonoBehaviour:
       SurfaceTextures:
       - {fileID: 2800000, guid: ca79d3243d4cac34b99a9fa5ecc66dc8, type: 3}
       - {fileID: 2800000, guid: 84a829ea8ef534c44a1d3ef42199a47f, type: 3}
-      SurfaceTag: Default
+      - {fileID: 2800000, guid: f4d9097c696a9d448b059e24bed39bc3, type: 3}
+      - {fileID: 2800000, guid: 893ac0c1132895c42b5643d8e0b4495d, type: 3}
+      - {fileID: 2800000, guid: 974128f7ca2875240b82d9bef8f1a266, type: 3}
+      SurfaceTag: Concrete
       AllowFootsteps: 1
       AllowImpactMark: 1
     FootstepProperties:
@@ -41,8 +44,15 @@ MonoBehaviour:
   - SurfaceName: Wood
     SurfaceProperties:
       SurfaceTextures:
-      - {fileID: 2800000, guid: aa9b7bf7860ee7f40a9fa60fb452e28e, type: 3}
-      SurfaceTag: Wood
+      - {fileID: 2800000, guid: 7c1a7029344f9634db43002ac500c4a3, type: 3}
+      - {fileID: 2800000, guid: 48ff34383e60440458b86d7c7c5306f2, type: 3}
+      - {fileID: 2800000, guid: 5270dd675676adc49a1a91dd4ef49ac2, type: 3}
+      - {fileID: 2800000, guid: f65bf01e69cecf741abe3e93ad2459ea, type: 3}
+      - {fileID: 2800000, guid: 372d9bb3fbbb18f4cabf70fc68480169, type: 3}
+      - {fileID: 2800000, guid: b2ab065ac2a60584dbe7874166352e28, type: 3}
+      - {fileID: 2800000, guid: 273b9497463b0f84b8ccaa20d1bc83b0, type: 3}
+      - {fileID: 2800000, guid: fff5c5adc1073f243b16628e27dc4115, type: 3}
+      SurfaceTag: Default
       AllowFootsteps: 1
       AllowImpactMark: 1
     FootstepProperties:
@@ -64,7 +74,9 @@ MonoBehaviour:
   - SurfaceName: Floor
     SurfaceProperties:
       SurfaceTextures:
-      - {fileID: 2800000, guid: 571959d0003634c4c95350acca82fbaf, type: 3}
+      - {fileID: 2800000, guid: 169c6e62e4ee55b4097083050c48d5d4, type: 3}
+      - {fileID: 2800000, guid: ab01d52206a8e1047a3a20c6db04f94c, type: 3}
+      - {fileID: 2800000, guid: 806ac52c46bfe5d4fae852a49229f337, type: 3}
       SurfaceTag: Floor
       AllowFootsteps: 1
       AllowImpactMark: 1
@@ -193,5 +205,46 @@ MonoBehaviour:
       BulletmarkImpacts: []
       SurfaceMeleemarks:
       - {fileID: 1177019025291314, guid: f4fc70f27b3a13946b0dd88f16b25e9e, type: 3}
+      MeleemarkImpacts: []
+      ImpactVolume: 1
+  - SurfaceName: Carpet
+    SurfaceProperties:
+      SurfaceTextures: []
+      SurfaceTag: Carpet
+      AllowFootsteps: 1
+      AllowImpactMark: 1
+    FootstepProperties:
+      SurfaceFootsteps: []
+      FootstepsModifier: 1
+    ImpactProperties:
+      SurfaceBulletmarks: []
+      BulletmarkImpacts: []
+      SurfaceMeleemarks: []
+      MeleemarkImpacts: []
+      ImpactVolume: 1
+  - SurfaceName: Tile
+    SurfaceProperties:
+      SurfaceTextures:
+      - {fileID: 2800000, guid: 9b455f596029e5741b4b662dd90abd16, type: 3}
+      - {fileID: 2800000, guid: 27c1f441196c5fc4e9371b6de39d6579, type: 3}
+      - {fileID: 2800000, guid: efeb4899d46300a41b0af52f1650aea9, type: 3}
+      SurfaceTag: Tile
+      AllowFootsteps: 1
+      AllowImpactMark: 1
+    FootstepProperties:
+      SurfaceFootsteps:
+      - {fileID: 8300000, guid: b993df4a93c1d304ab19d8b2eb88c9a5, type: 3}
+      - {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}
+      - {fileID: 8300000, guid: 0909de896e9029541b92ae05fe15e4b6, type: 3}
+      - {fileID: 8300000, guid: 6ad0cf00f050bee41a2dee098475dc78, type: 3}
+      - {fileID: 8300000, guid: 7ca5a9710db4327439c9f8cb8204615e, type: 3}
+      - {fileID: 8300000, guid: 14ae706fef2303e4cb71112dbd5d250b, type: 3}
+      - {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}
+      - {fileID: 8300000, guid: d15f7338d693f0343843a6b9096d27f6, type: 3}
+      FootstepsModifier: 1
+    ImpactProperties:
+      SurfaceBulletmarks: []
+      BulletmarkImpacts: []
+      SurfaceMeleemarks: []
       MeleemarkImpacts: []
       ImpactVolume: 1
