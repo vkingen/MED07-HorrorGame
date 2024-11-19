@@ -170,8 +170,8 @@ namespace HFPS.Player
                     batteryPercentage -= Time.deltaTime * (100 / batteryLifeInSec);
                     batteryPercentage = Mathf.Clamp(batteryPercentage, 0, 100);
 
-                    m_flashlightIntensity = flashlightIntensity * batteryPercentage / 100;
-                    LightObject.intensity = m_flashlightIntensity;
+                    //m_flashlightIntensity = flashlightIntensity * batteryPercentage / 100;
+                    //LightObject.intensity = m_flashlightIntensity;
 
                     if (batteryPercentage <= 1.0f)
                     {

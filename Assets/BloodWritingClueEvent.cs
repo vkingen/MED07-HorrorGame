@@ -7,7 +7,7 @@ public class BloodWritingClueEvent : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             Debug.Log("START WRITE");
             PerformEvent();
