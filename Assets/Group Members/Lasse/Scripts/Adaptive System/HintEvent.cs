@@ -7,6 +7,11 @@ public class HintEvent : MonoBehaviour
     public bool isTriggered = false; // Flag to avoid retriggering
     public UnityEvent eventToTrigger;
 
+    public void DeactiveEvent()
+    {
+        isTriggered = true;
+    }
+
     public void TriggerEvent()
     {
         if (isTriggered) return;
