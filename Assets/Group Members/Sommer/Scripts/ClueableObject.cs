@@ -13,6 +13,11 @@ public class ClueableObject : MonoBehaviour
     [SerializeField]
     private Material originalMaterial;
 
+
+    public Color fresnelColor; // Color property to set the Fresnel effect color
+
+    public string fresnelColorProperty = "FresnelColor";
+
     void Start()
     {
         isClueActive = false;
@@ -21,6 +26,10 @@ public class ClueableObject : MonoBehaviour
     {
         if (isClueActive)
         {
+            if (clueMaterial.HasProperty(fresnelColorProperty))
+            {
+                clueMaterial.SetColor(fresnelColorProperty, fresnelColor);
+            }
             objectRenderer.material = clueMaterial;
         }
         else
