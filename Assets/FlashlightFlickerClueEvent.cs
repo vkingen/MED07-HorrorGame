@@ -17,6 +17,8 @@ public class FlashlightFlickerClueEvent : MonoBehaviour
 
     private float flickerTimer;
 
+    [SerializeField] private GameObject particleEffect;
+
     private void Update()
     {
         if(isFlickering)
@@ -39,7 +41,9 @@ public class FlashlightFlickerClueEvent : MonoBehaviour
 
     private void ResetIntensity()
     {
-        flashlight.intensity = startLightIntensity;
+        //flashlight.intensity = startLightIntensity;
+        flashlight.intensity = 0;
+        particleEffect.SetActive(true);
     }
 
     IEnumerator FlickerDelay()
