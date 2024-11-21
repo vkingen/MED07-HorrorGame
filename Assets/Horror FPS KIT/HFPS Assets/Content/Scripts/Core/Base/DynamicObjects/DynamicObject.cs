@@ -161,6 +161,36 @@ namespace HFPS.Systems
             useType = (Type_Use)value;
         }
 
+        public void OpenDoor()
+        {
+            if (dynamicType == Type_Dynamic.Door && !isOpened && !isLocked)
+            {
+                // Play opening animation if it exists
+                if (m_Animation && !string.IsNullOrEmpty(useAnim))
+                {
+                    m_Animation.Play(useAnim);
+                }
+
+                // Play the open sound
+                if (Open)
+                {
+                    AudioSource.PlayClipAtPoint(Open, transform.position, m_Volume);
+                }
+
+                // Set the state to opened
+                isOpened = true;
+
+                // You may want to update the physics joint if applicable
+                if (Joint)
+                {
+                    Joint.useLimits = true; // Allow the door to open
+                }
+
+                // Invoke any interact events if necessary
+                InteractEvent?.Invoke();
+            }
+        }
+
 #if TW_LOCALIZATION_PRESENT
         void OnEnable()
         {
