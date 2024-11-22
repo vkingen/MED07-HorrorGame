@@ -254,8 +254,8 @@ MonoBehaviour:
   valveTurnTime: 0
   turnAxis: 0
   m_Volume: 1
-  Open: {fileID: 8300000, guid: 61afa4e1187416f4f9b292e779abcf13, type: 3}
-  Close: {fileID: 8300000, guid: effd4f93dc055d24d8f4406aed266ea5, type: 3}
+  Open: {fileID: 8300000, guid: 419a7e202ca35c7469cea0e11e411ebb, type: 3}
+  Close: {fileID: 8300000, guid: b2cd5f83eabba4743965f23eb2cf0734, type: 3}
   LockedTry: {fileID: 0}
   UnlockSound: {fileID: 0}
   LeverUpSound: {fileID: 0}
@@ -618,7 +618,7 @@ MonoBehaviour:
   customTextKey: 
   keyID: 0
   useAnim: BedsideTable_Door_Open
-  backUseAnim: BedsideTable_Door_Close
+  backUseAnim: Door_Close_Y_P90
   mouseInput: 0
   mouseSmoothing: 0
   useJammedPlanks: 0
@@ -644,8 +644,8 @@ MonoBehaviour:
   valveTurnTime: 0
   turnAxis: 0
   m_Volume: 1
-  Open: {fileID: 8300000, guid: 61afa4e1187416f4f9b292e779abcf13, type: 3}
-  Close: {fileID: 8300000, guid: effd4f93dc055d24d8f4406aed266ea5, type: 3}
+  Open: {fileID: 8300000, guid: 0cc6e803968de634daeaa14338eccfce, type: 3}
+  Close: {fileID: 8300000, guid: fcfbe0ce351b39d4db7d919cbd34aabc, type: 3}
   LockedTry: {fileID: 0}
   UnlockSound: {fileID: 0}
   LeverUpSound: {fileID: 0}
@@ -697,7 +697,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 002ffcf3d87dd30438762913c4a9a5e5, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 002ffcf3d87dd30438762913c4a9a5e5, type: 2}
-  - {fileID: 7400000, guid: 9216aa0e0d1469b4fa4be7e4d3c36e1e, type: 2}
+  - {fileID: 7400000, guid: 6b66b217302e8eb41b2e637d2e65bd95, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
