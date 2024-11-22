@@ -8,7 +8,13 @@ public class DissolveController : MonoBehaviour
 
     private float dissolveValue = 0.0f;
 
-    private float destroyAfter = 10f;
+    [SerializeField] private float destroyAfter = 10f;
+
+    private void Awake()
+    {
+        dissolveValue = 0.0f;
+        dissolveMaterial.SetFloat(dissolveProperty, 0.0f);
+    }
 
     void Update()
     {

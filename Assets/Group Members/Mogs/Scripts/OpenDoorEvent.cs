@@ -1,12 +1,10 @@
 using UnityEngine;
 using HFPS.Systems;
 
-using UnityEngine;
-using HFPS.Systems; // Include the correct namespace
-
 public class OpenDoorEvent : MonoBehaviour
 {
     public DynamicObject door;
+    public BallRoller ball;
 
     void Start()
     {
@@ -25,6 +23,7 @@ public class OpenDoorEvent : MonoBehaviour
         {
             // Open the door without player interaction
             door.OpenDoor();
+            ball.PerformEvent();
         }
     }
 }
