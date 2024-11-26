@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class HintObject : MonoBehaviour
@@ -5,6 +6,8 @@ public class HintObject : MonoBehaviour
     public Material baseMat;
     public Material hintMat;
     public MeshRenderer meshRenderer;
+
+    [SerializeField] private float waitTime;
 
     void Start()
     {
@@ -14,8 +17,14 @@ public class HintObject : MonoBehaviour
         }
     }
 
-    public void TurnHintOn()
+    public void TurnHintOnWrapper()
     {
+        StartCoroutine(nameof(TurnHintOn));
+    }
+
+    public IEnumerator TurnHintOn()
+    {
+        yield return new WaitForSeconds(waitTime);
         if (hintMat != null && meshRenderer != null)
         {
             meshRenderer.material = hintMat;
