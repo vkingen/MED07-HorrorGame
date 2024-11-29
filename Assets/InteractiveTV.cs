@@ -11,6 +11,8 @@ public class InteractiveTV : MonoBehaviour
     [SerializeField] private AudioClip onAudioClip;
     [SerializeField] private AudioClip offAudioClip;
 
+    [SerializeField] private GameObject lightEffect;
+
     private bool isOn = false;
 
     public void PerformEvent()
@@ -28,6 +30,7 @@ public class InteractiveTV : MonoBehaviour
         videoPlayer.Play();
         audioSource.clip = onAudioClip;
         audioSource.Play();
+        lightEffect.SetActive(isOn);
     }
     private void TurnOff()
     {
@@ -36,6 +39,7 @@ public class InteractiveTV : MonoBehaviour
         videoPlayer.Stop();
         audioSource.clip = offAudioClip;
         audioSource.Play();
+        lightEffect.SetActive(isOn);
     }
 
     public void Toggle()
