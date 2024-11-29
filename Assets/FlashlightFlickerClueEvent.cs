@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
 public class FlashlightFlickerClueEvent : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class FlashlightFlickerClueEvent : MonoBehaviour
     public float flickerSpeed = 0.1f;  // Time between flickers (in seconds)
 
     private float flickerTimer;
+
+    public UnityEvent whenPopped;
 
     [SerializeField] private GameObject particleEffect;
 
@@ -44,6 +47,7 @@ public class FlashlightFlickerClueEvent : MonoBehaviour
         //flashlight.intensity = startLightIntensity;
         flashlight.intensity = 0;
         particleEffect.SetActive(true);
+        whenPopped.Invoke();
     }
 
     IEnumerator FlickerDelay()

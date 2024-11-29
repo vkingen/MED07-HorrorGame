@@ -25,14 +25,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _SampleTexture2D_b7b0a14f0e414ed2927c85cc12e3b3ae_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: c2df6b0704ca4044fad9730eb94ca5a6, type: 3}
+        m_Texture: {fileID: 2800000, guid: e90cf522e78063a4fb1fdf0f09e75384, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _DissolveControl: 0.12022795
+    - _DissolveControl: 0.12011385
     - _EdgeThickness: 0.05
     - _NoiseScale: 30
     m_Colors:
