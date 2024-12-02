@@ -30,7 +30,10 @@ public class PlayerProgressTracker : MonoBehaviour
 
     public void ResetTimer()
     {
-        totalTimeWithoutClue = 0f;
+        if(totalTimeWithoutClue > 0f)
+        {
+            totalTimeWithoutClue = 0f;
+        }
     }
 
     public float GetTotalTimeWithoutClue()
