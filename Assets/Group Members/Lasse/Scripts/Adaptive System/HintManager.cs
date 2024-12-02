@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class HintManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class HintManager : MonoBehaviour
 
     private List<HintEvent> hintEvents = new List<HintEvent>();
     private string currentRoom = ""; // Tracks the room the player is currently in
+
+    [SerializeField] private AudioSource evansAudioSource;
+    [SerializeField] private AudioClip[] alternativeNotchClips;
+    private bool isPlayingAlternativeNotch = false;
 
     private void Awake()
     {
@@ -46,6 +51,14 @@ public class HintManager : MonoBehaviour
                 closestEvent.TriggerEvent();
                 playerProgressTracker.ResetTimer(); // Reset the timer since a hint was given
             }
+            else
+            {
+                if (!isPlayingAlternativeNotch)
+                {
+                    //PlayAlternativeNotchVoiceLine();
+                    //playerProgressTracker.ResetTimer();
+                }
+            }
         }
     }
 
@@ -66,7 +79,25 @@ public class HintManager : MonoBehaviour
                 }
             }
         }
-
         return closestEvent;
+    }
+
+    private void PlayAlternativeNotchVoiceLine()
+    {
+        isPlayingAlternativeNotch = true;
+        int randomInt = Random.Range(0, alternativeNotchClips.Length);
+        evansAudioSource.clip = alternativeNotchClips[randomInt];
+        evansAudioSource.Play();
+        StartCoroutine(AlternativeNotchDelay());
+    }
+    
+
+    IEnumerator AlternativeNotchDelay()
+    {
+        while (evansAudioSource.isPlaying)
+        {
+            yield return null; // Wait for the next frame
+        }
+        isPlayingAlternativeNotch = false;
     }
 }
