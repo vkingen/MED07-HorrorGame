@@ -605,30 +605,31 @@ namespace HFPS.Player
 
             if(firstExamine.clueState == InteractiveItem.ClueState.clue)
             {
+                PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
+                if (tracker != null)
+                {
+                    tracker.StopTracking();
+                }
                 if (!firstExamine.clueHasBeenExamined)
                 {
-                    PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
-                    if(tracker != null)
-                    {
-                        tracker.StopTracking();
-                    }
                     if (firstExamine.gameObject.GetComponentInChildren<EventClue>() != null)
                     {
                         EventClue eventClue = firstExamine.gameObject.GetComponentInChildren<EventClue>();
-                        eventClue.ResetTimer();
+                        //eventClue.ResetTimer();
+                        eventClue.ChangeTimer();
                         firstExamine.clueHasBeenExamined = true;
                     }
                 }
             }
             else if (firstExamine.clueState == InteractiveItem.ClueState.hint)
             {
+                PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
+                if (tracker != null)
+                {
+                    tracker.StopTracking();
+                }
                 if (!firstExamine.clueHasBeenExamined)
                 {
-                    PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
-                    if (tracker != null)
-                    {
-                        tracker.StopTracking();
-                    }
                     if (firstExamine.gameObject.GetComponentInChildren<EventClue>() != null)
                     {
                         EventClue eventClue = firstExamine.gameObject.GetComponentInChildren<EventClue>();
@@ -986,6 +987,12 @@ namespace HFPS.Player
 
         void TakeObject(bool takeSecond, GameObject take, bool put = false)
         {
+            Debug.Log("TAKE OBJECT");
+            PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
+            if (tracker != null)
+            {
+                tracker.StartTracking();
+            }
             SetFloatingIconsVisible(true);
             SecondExaminedObject(false);
             objectHeld.SendMessage("OnEndExamine", SendMessageOptions.DontRequireReceiver);

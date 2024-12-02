@@ -32,7 +32,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _DissolveControl: 0.12029278
+    - _DissolveControl: 0
     - _EdgeThickness: 0.05
     - _NoiseScale: 30
     m_Colors:
