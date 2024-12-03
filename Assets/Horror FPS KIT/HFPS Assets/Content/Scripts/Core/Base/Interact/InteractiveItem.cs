@@ -274,6 +274,11 @@ namespace HFPS.Systems
 
         public void UseObject()
         {
+            if (GetComponent<ItemEvent>())
+            {
+                GetComponent<ItemEvent>().OnItemEvent();
+            }
+            
             if (itemType == ItemType.OnlyExamine) return;
 
             if (pickupSound)
@@ -281,11 +286,6 @@ namespace HFPS.Systems
                 audioSource.clip = pickupSound;
                 audioSource.volume = pickupVolume;
                 audioSource.Play();
-            }
-
-            if (GetComponent<ItemEvent>())
-            {
-                GetComponent<ItemEvent>().OnItemEvent();
             }
 
             if (GetComponent<TriggerObjective>())

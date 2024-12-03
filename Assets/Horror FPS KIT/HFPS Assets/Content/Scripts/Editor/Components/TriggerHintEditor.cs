@@ -13,6 +13,8 @@ namespace HFPS.Editors
         private SerializedProperty m_TimeShow;
         private SerializedProperty m_ShowAfter;
         private SerializedProperty m_HintSound;
+        private SerializedProperty m_voiceLineClip;
+        private SerializedProperty m_voiceLines;
 
         private void OnEnable()
         {
@@ -21,6 +23,8 @@ namespace HFPS.Editors
             m_TimeShow = serializedObject.FindProperty("TimeShow");
             m_ShowAfter = serializedObject.FindProperty("ShowAfter");
             m_HintSound = serializedObject.FindProperty("HintSound");
+            m_voiceLineClip = serializedObject.FindProperty("voiceLineClip");
+            m_voiceLines = serializedObject.FindProperty("voiceLines");
         }
 
         public override void OnInspectorGUI()
@@ -41,6 +45,8 @@ namespace HFPS.Editors
             EditorGUILayout.PropertyField(m_TimeShow);
             EditorGUILayout.PropertyField(m_ShowAfter);
             EditorGUILayout.PropertyField(m_HintSound);
+            EditorGUILayout.PropertyField(m_voiceLineClip);
+            EditorGUILayout.PropertyField(m_voiceLines);
 
             serializedObject.ApplyModifiedProperties();
         }

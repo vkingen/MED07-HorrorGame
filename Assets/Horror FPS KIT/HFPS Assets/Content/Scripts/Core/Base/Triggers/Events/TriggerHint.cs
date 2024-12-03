@@ -16,12 +16,15 @@ namespace HFPS.Systems
         private HFPS_GameManager gameManager;
         private InputHandler inputHandler;
         private AudioSource soundEffects;
+        
 
         public string Hint;
         public string HintKey;
         public float TimeShow;
         public float ShowAfter = 0f;
         public AudioClip HintSound;
+        public AudioClip voiceLineClip;
+        public AudioSource voiceLines;
 
         private float timer;
         private bool timedShow;
@@ -122,6 +125,11 @@ namespace HFPS.Systems
                     {
                         soundEffects.clip = HintSound;
                         soundEffects.Play();
+                    }
+                    if (voiceLineClip && voiceLines)
+                    {
+                        voiceLines.clip = voiceLineClip;
+                        voiceLines.Play();
                     }
                     isShown = true;
                 }
