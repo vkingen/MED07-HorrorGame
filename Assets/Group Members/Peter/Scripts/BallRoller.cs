@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class BallRoller : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BallRoller : MonoBehaviour
     [SerializeField] public AudioClip ballRollingSound;
     [SerializeField] private bool isTriggered = false;
     [SerializeField] private DissolveController dissolveController;
+
+    public UnityEvent whenPerformed;
     //private Renderer renderer;
     void Start()
     {
@@ -21,6 +24,7 @@ public class BallRoller : MonoBehaviour
     {
         StartCoroutine(RollAndStop());
         StartCoroutine(PlayRollingSound());
+        whenPerformed.Invoke();
     }
     private IEnumerator RollAndStop()
     {

@@ -23,7 +23,7 @@ public class OpenDoorEvent : MonoBehaviour
         {
             // Open the door without player interaction
             door.OpenDoor();
-            ball.PerformEvent();
+            //ball.PerformEvent();
         }
     }
 }
