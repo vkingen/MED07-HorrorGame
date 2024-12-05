@@ -13,14 +13,33 @@ public class HintManager : MonoBehaviour
     private List<HintEvent> hintEvents = new List<HintEvent>();
     private string currentRoom = ""; // Tracks the room the player is currently in
 
+   
+
+    // Alternative Settings
+    [SerializeField] private float alternativeNotchTimerMax = 30;
+    private float alternativeNotchTimerCurrent;
+    [HideInInspector] public bool alternativeNotchTimerActive = false;
     [SerializeField] private AudioSource evansAudioSource;
     [SerializeField] private AudioClip[] alternativeNotchClips;
     private bool isPlayingAlternativeNotch = false;
+    public bool pauseAlternativeTimer = false;
+
+
+    public void ActivateAlternativeNotchTimer(bool state)
+    {
+        alternativeNotchTimerActive = state;
+    }
+    public void ResetAlternativeTimer()
+    {
+        alternativeNotchTimerCurrent = alternativeNotchTimerMax;
+    }
+
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        ResetAlternativeTimer();
     }
 
     private void Start()
@@ -32,6 +51,16 @@ public class HintManager : MonoBehaviour
     private void Update()
     {
         CheckForHintTrigger();
+        if (alternativeNotchTimerActive && !pauseAlternativeTimer)
+        {
+            if(alternativeNotchTimerCurrent <= 0)
+            {
+                alternativeNotchTimerCurrent = alternativeNotchTimerMax;
+                ActivateAlternativeNotchTimer(false);
+            }
+            alternativeNotchTimerCurrent -= Time.deltaTime;
+            Debug.Log("State is: " + alternativeNotchTimerActive + " and current time is: " + alternativeNotchTimerCurrent);
+        }
     }
 
     public void SetCurrentRoom(string roomName)
@@ -53,10 +82,11 @@ public class HintManager : MonoBehaviour
             }
             else
             {
-                if (!isPlayingAlternativeNotch)
+                if (!isPlayingAlternativeNotch && !alternativeNotchTimerActive)
                 {
                     PlayAlternativeNotchVoiceLine();
-                    playerProgressTracker.ResetTimer();
+                    ActivateAlternativeNotchTimer(true);
+                    //playerProgressTracker.ResetTimer();
                 }
             }
         }

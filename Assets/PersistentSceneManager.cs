@@ -45,6 +45,7 @@ public class PersistentSceneManager : MonoBehaviour
     /// <param name="sceneIndex">The index of the scene in the build settings.</param>
     public void LoadScene(int sceneIndex)
     {
+        Debug.Log("Loadscene" + sceneIndex);
         SceneManager.LoadScene(sceneIndex);
     }
 

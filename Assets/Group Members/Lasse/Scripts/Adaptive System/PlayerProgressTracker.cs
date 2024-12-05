@@ -8,6 +8,8 @@ public class PlayerProgressTracker : MonoBehaviour
     [SerializeField] private float globalTimerMax;
     private float globalTimer;
     public UnityEvent whenGlobalTimerReachesZero;
+    [SerializeField] private HintManager hintManager;
+
 
     private void Awake()
     {
@@ -30,24 +32,28 @@ public class PlayerProgressTracker : MonoBehaviour
     public void StartTracking()
     {
         trackingTime = true;
+        hintManager.pauseAlternativeTimer = false;
     }
 
     public void StopTracking()
     {
         trackingTime = false;
+        hintManager.pauseAlternativeTimer = true;
     }
 
     public void AddToTimer(float timeToAdd)
     {
         totalTimeWithoutClue -= timeToAdd;
+        hintManager.ResetAlternativeTimer();
     }
 
     public void ResetTimer()
     {
-        if(totalTimeWithoutClue > 0f)
+        if (totalTimeWithoutClue > 0f)
         {
             totalTimeWithoutClue = 0f;
         }
+        hintManager.ResetAlternativeTimer();
     }
 
     public float GetTotalTimeWithoutClue()
