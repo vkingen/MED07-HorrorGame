@@ -4,16 +4,6 @@ using UnityEngine.Events;
 
 public class OfficePhone : MonoBehaviour
 {
-
-    // Phone rings              - Audio/Highlight
-    // Player clicks on phone   - Audio/New mesh
-    // Voice speaks via phone   - Audio
-    // Voice stops              - Highlight
-    // Player clicks on phone   - Audio / new mesh
-    // Main character speaks    - Audio / Highlight on keys
-    // Player clicks on keys    - Audio / Fade to black
-
-
     [SerializeField] private GameObject phoneOff, phoneOn, carKeys;
     
     [SerializeField] private AudioSource phoneMainAudioSource;
@@ -21,6 +11,7 @@ public class OfficePhone : MonoBehaviour
     [SerializeField] private AudioSource evanTalkingAudioSource;
     [SerializeField] private AudioClip bossVoice, phoneAnswer, phoneHangUp, phoneRingtone, endCall, carDrivingAway;
 
+    [SerializeField] private HintObject phoneOffMat, phoneOnMat, keys;
     
     
     private void Start()
@@ -49,7 +40,7 @@ public class OfficePhone : MonoBehaviour
         phoneOff.layer = LayerMask.NameToLayer("Interact");
 
         // Start highlight effect
-        
+        phoneOffMat.TurnHintOnWrapper();
     }
 
 
@@ -94,9 +85,10 @@ public class OfficePhone : MonoBehaviour
 
         // Enable Interaction
         phoneOn.layer = LayerMask.NameToLayer("Interact");
-        
-        // Enable Highlight
 
+        // Enable Highlight
+        phoneOffMat.TurnHintOff();
+        phoneOnMat.TurnHintOnWrapper();
     }
 
     public void HangUpThePhone()
@@ -129,9 +121,9 @@ public class OfficePhone : MonoBehaviour
     {
         // Enable Interaction
         carKeys.layer = LayerMask.NameToLayer("Interact");
-        
-        // highlight effect on car keys
 
+        // highlight effect on car keys
+        keys.TurnHintOnWrapper();
     }
 
     public void PickingUpCarKeys()

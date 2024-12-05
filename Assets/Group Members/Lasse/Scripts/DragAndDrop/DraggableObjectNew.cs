@@ -9,6 +9,8 @@ public class DraggableObjectNew : MonoBehaviour
     private DropZone currentDropZone;
     private Vector3 originalPosition;
 
+    [SerializeField] private GameObject descriptionText;
+
     // Define the type of this draggable object
     public ItemTypeNew objectType;
 
@@ -52,6 +54,13 @@ public class DraggableObjectNew : MonoBehaviour
             }
 
             transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
+            if(descriptionText!= null)
+                descriptionText.SetActive(true);
+        }
+        else
+        {
+            if (descriptionText != null)
+                descriptionText.SetActive(false);
         }
     }
 

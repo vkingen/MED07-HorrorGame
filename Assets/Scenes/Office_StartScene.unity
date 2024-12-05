@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 509720}
   - component: {fileID: 509722}
   - component: {fileID: 509721}
+  - component: {fileID: 509723}
   m_Layer: 0
   m_Name: Phone_On
   m_TagString: Untagged
@@ -298,6 +299,22 @@ MonoBehaviour:
   WaitForNextSound: 0
   InteractSound: {fileID: 0}
   InteractVolume: 1
+--- !u!114 &509723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10a8651175e9664c80d621ceef9632e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMat: {fileID: 2100000, guid: 27941fb818170d840ab2be78dfaa9d8d, type: 2}
+  hintMat: {fileID: 2100000, guid: 5bcee62f7a63c7347b85a0c075ba748e, type: 2}
+  meshRenderer: {fileID: 509719}
+  waitTime: 0
 --- !u!1 &3096306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +1933,9 @@ MonoBehaviour:
   phoneRingtone: {fileID: 8300000, guid: 0f473cd9087f978449a1dbd6982ecab8, type: 3}
   endCall: {fileID: 8300000, guid: b49fd498612c6544198ee0978517c710, type: 3}
   carDrivingAway: {fileID: 8300000, guid: 9c5c55f684f5e2a4382e5bf4cfeef166, type: 3}
+  phoneOffMat: {fileID: 604425677300175603}
+  phoneOnMat: {fileID: 509723}
+  keys: {fileID: 7921927890597434179}
   whenDone:
     m_PersistentCalls:
       m_Calls:
@@ -11664,6 +11684,7 @@ GameObject:
   - component: {fileID: 604425677300175600}
   - component: {fileID: 604425677300175602}
   - component: {fileID: 604425677300175601}
+  - component: {fileID: 604425677300175603}
   m_Layer: 0
   m_Name: Phone_Off
   m_TagString: Untagged
@@ -11828,6 +11849,22 @@ MonoBehaviour:
   WaitForNextSound: 0
   InteractSound: {fileID: 0}
   InteractVolume: 1
+--- !u!114 &604425677300175603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604425677300175596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10a8651175e9664c80d621ceef9632e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMat: {fileID: 2100000, guid: 27941fb818170d840ab2be78dfaa9d8d, type: 2}
+  hintMat: {fileID: 2100000, guid: 5bcee62f7a63c7347b85a0c075ba748e, type: 2}
+  meshRenderer: {fileID: 604425677300175598}
+  waitTime: 0
 --- !u!4 &631180803022193009
 Transform:
   m_ObjectHideFlags: 0
@@ -66884,6 +66921,7 @@ GameObject:
   - component: {fileID: 7921927890597434176}
   - component: {fileID: 7921927890597434175}
   - component: {fileID: 7921927890597434178}
+  - component: {fileID: 7921927890597434179}
   m_Layer: 0
   m_Name: I_Key03
   m_TagString: Untagged
@@ -67173,6 +67211,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7921927890597434179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891731140112624798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10a8651175e9664c80d621ceef9632e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMat: {fileID: 2100000, guid: 21ef1bc8a5ad0014f8f01ad66e37ca43, type: 2}
+  hintMat: {fileID: 2100000, guid: 107ecc27552dc7743ad71348fb61c0da, type: 2}
+  meshRenderer: {fileID: 7913570093743069040}
+  waitTime: 0
 --- !u!4 &7923260030025880220
 Transform:
   m_ObjectHideFlags: 0
