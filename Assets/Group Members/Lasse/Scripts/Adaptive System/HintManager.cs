@@ -55,8 +55,8 @@ public class HintManager : MonoBehaviour
             {
                 if (!isPlayingAlternativeNotch)
                 {
-                    //PlayAlternativeNotchVoiceLine();
-                    //playerProgressTracker.ResetTimer();
+                    PlayAlternativeNotchVoiceLine();
+                    playerProgressTracker.ResetTimer();
                 }
             }
         }

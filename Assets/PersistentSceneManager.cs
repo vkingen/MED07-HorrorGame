@@ -5,6 +5,18 @@ public class PersistentSceneManager : MonoBehaviour
 {
     private static PersistentSceneManager instance;
 
+    public static PersistentSceneManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                Debug.LogError("PersistentSceneManager instance is null. Make sure it is present in the scene.");
+            }
+            return instance;
+        }
+    }
+
     private void Awake()
     {
         // Ensure only one instance of the SceneManager exists
