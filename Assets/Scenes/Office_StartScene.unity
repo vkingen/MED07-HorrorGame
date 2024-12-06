@@ -682,6 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 2
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -836,6 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 1
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
@@ -1095,6 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 0
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -1575,6 +1578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 0
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
@@ -1683,7 +1687,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1031014146}
-  - {fileID: 1031004318}
   - {fileID: 1031002702}
   - {fileID: 1031002662}
   - {fileID: 1031002622}
@@ -1907,6 +1910,7 @@ Transform:
   - {fileID: 1842643240}
   - {fileID: 1625758532}
   - {fileID: 446085794}
+  - {fileID: 1031004318}
   m_Father: {fileID: 632509148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &342229517
@@ -1924,18 +1928,21 @@ MonoBehaviour:
   phoneOff: {fileID: 604425677300175596}
   phoneOn: {fileID: 509717}
   carKeys: {fileID: 7891731140112624798}
+  caseFile: {fileID: 1967199140}
   phoneMainAudioSource: {fileID: 1842643241}
   phoneDetailsAudioSource: {fileID: 1625758533}
   evanTalkingAudioSource: {fileID: 948850166}
-  bossVoice: {fileID: 8300000, guid: fd3e0d89bd8ea284cbd18928628be70e, type: 3}
+  bossVoice: {fileID: 8300000, guid: 37215cd22e22fd6448dc8fe671331a81, type: 3}
   phoneAnswer: {fileID: 8300000, guid: 984d58cdab1807f488d34b35e0cfa281, type: 3}
   phoneHangUp: {fileID: 8300000, guid: 6401cf694b8b6664f81cba1567cd77be, type: 3}
   phoneRingtone: {fileID: 8300000, guid: 0f473cd9087f978449a1dbd6982ecab8, type: 3}
   endCall: {fileID: 8300000, guid: b49fd498612c6544198ee0978517c710, type: 3}
   carDrivingAway: {fileID: 8300000, guid: 9c5c55f684f5e2a4382e5bf4cfeef166, type: 3}
+  CaseVO: {fileID: 8300000, guid: 69b366eb32cbc1c4e8a5dd4133b7ef44, type: 3}
   phoneOffMat: {fileID: 604425677300175603}
   phoneOnMat: {fileID: 509723}
   keys: {fileID: 7921927890597434179}
+  caseFileMat: {fileID: 1967199141}
   whenDone:
     m_PersistentCalls:
       m_Calls:
@@ -2858,6 +2865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 2
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
@@ -3290,8 +3298,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 92bd703d5f18c7b42abbaed9eb9cb07e, type: 3}
-  m_Resource: {fileID: 8300000, guid: 92bd703d5f18c7b42abbaed9eb9cb07e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d488f8eaa11e6134c9cd4316e0d5b986, type: 3}
+  m_Resource: {fileID: 8300000, guid: d488f8eaa11e6134c9cd4316e0d5b986, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.623
   m_Pitch: 1
@@ -6641,11 +6649,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 137303858}
+    m_TransformParent: {fileID: 342229516}
     m_Modifications:
     - target: {fileID: 1031004297, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_Name
-      value: SM_Paper_NN_01a
+      value: Case
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031004297, guid: abc00000000005610186498473536756, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_RootOrder
@@ -6665,19 +6677,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.008000374
+      value: 1.2169402
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.77489996
+      value: 1.7749
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.66179657
+      value: -8.6731415
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.087155975
+      value: 0.64278895
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6685,16 +6697,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9961947
+      value: -0.7660433
       objectReference: {fileID: 0}
     - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1031004298, guid: abc00000000005610186498473536756, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031004301, guid: abc00000000005610186498473536756, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031004305, guid: abc00000000005610186498473536756, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031004309, guid: abc00000000005610186498473536756, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031004313, guid: abc00000000005610186498473536756, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1031004297, guid: abc00000000005610186498473536756,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1967199144}
+    - targetCorrespondingSourceObject: {fileID: 1031004297, guid: abc00000000005610186498473536756,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1967199143}
+    - targetCorrespondingSourceObject: {fileID: 1031004297, guid: abc00000000005610186498473536756,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1967199142}
+    - targetCorrespondingSourceObject: {fileID: 1031004297, guid: abc00000000005610186498473536756,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1967199141}
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000005610186498473536756, type: 3}
 --- !u!4 &1031004318 stripped
 Transform:
@@ -7119,6 +7167,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1031014126, guid: abc00000000012206628238370184658,
     type: 3}
   m_PrefabInstance: {fileID: 1031014145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1077388650 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1031004303, guid: abc00000000005610186498473536756,
+    type: 3}
+  m_PrefabInstance: {fileID: 1031004317}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1109063896
 GameObject:
@@ -7780,6 +7834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 1
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
@@ -8237,6 +8292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 0
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -8736,6 +8792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 2
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -8987,6 +9044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 1
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
@@ -9140,6 +9198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 0
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -9294,6 +9353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 0
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
@@ -10170,6 +10230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 1
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -10665,6 +10726,205 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1955420481}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1967199140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1031004297, guid: abc00000000005610186498473536756,
+    type: 3}
+  m_PrefabInstance: {fileID: 1031004317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1967199141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967199140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10a8651175e9664c80d621ceef9632e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMat: {fileID: 2100000, guid: 53fc00039c8ba994eb02be444845dbcc, type: 2}
+  hintMat: {fileID: 2100000, guid: 12cf7193e08b7ef499da2fc28432cf2d, type: 2}
+  meshRenderer: {fileID: 1077388650}
+  waitTime: 0
+--- !u!82 &1967199142
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967199140}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0c515da61c0bfc74d977f7e33e43a0ff, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0c515da61c0bfc74d977f7e33e43a0ff, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.623
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1967199143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967199140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfa8d7bc8884774382aac2b1bcb12db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectTitle: Pick up case
+  DynamicTitle:
+    ReflectType: 0
+    Instance: {fileID: 0}
+    ReflectName: Null
+    IsSettedUp: 0
+  UseText: Use
+  DynamicTrue: Close
+  DynamicFalse: Open
+  titleKey: 
+  useKey: 
+  dTrueKey: 
+  dFalseKey: 
+  isUppercased: 0
+  dynamicUseText: 0
+  overrideDoorText: 0
+--- !u!114 &1967199144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967199140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71236a69471c1e478bfdef22bbe2e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractType: 2
+  RepeatMode: 0
+  InteractObject: {fileID: 0}
+  InteractCall: UseObject
+  AnimationName: 
+  AnimationSpeed: 1
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 342229517}
+        m_TargetAssemblyTypeName: OfficePhone, Assembly-CSharp
+        m_MethodName: PickingUpCase
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1967199142}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  InteractBackEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  CancelExamine: 0
+  WaitForNextSound: 0
+  InteractSound: {fileID: 0}
+  InteractVolume: 1
 --- !u!1 &1982323810
 GameObject:
   m_ObjectHideFlags: 0
@@ -10740,6 +11000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 2
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
@@ -10983,6 +11244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionText: {fileID: 0}
   objectType: 2
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
