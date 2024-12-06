@@ -4,14 +4,14 @@ using UnityEngine.Events;
 
 public class OfficePhone : MonoBehaviour
 {
-    [SerializeField] private GameObject phoneOff, phoneOn, carKeys;
+    [SerializeField] private GameObject phoneOff, phoneOn, carKeys, caseFile;
     
     [SerializeField] private AudioSource phoneMainAudioSource;
     [SerializeField] private AudioSource phoneDetailsAudioSource;
     [SerializeField] private AudioSource evanTalkingAudioSource;
-    [SerializeField] private AudioClip bossVoice, phoneAnswer, phoneHangUp, phoneRingtone, endCall, carDrivingAway;
+    [SerializeField] private AudioClip bossVoice, phoneAnswer, phoneHangUp, phoneRingtone, endCall, carDrivingAway, CaseVO;
 
-    [SerializeField] private HintObject phoneOffMat, phoneOnMat, keys;
+    [SerializeField] private HintObject phoneOffMat, phoneOnMat, keys, caseFileMat;
     
     
     private void Start()
@@ -114,16 +114,47 @@ public class OfficePhone : MonoBehaviour
         }
 
         // After the boss talk is complete, execute the next step
-        WaitingForPlayerResponseAfterEvanTalk();
+        TurnOnCaseFile();
+    }
+     private void TurnOnCaseFile()
+    {
+        // Enable Interaction
+        caseFile.layer = LayerMask.NameToLayer("Interact");
+
+        // highlight effect on car keys
+        caseFileMat.TurnHintOnWrapper();
     }
 
-    private void WaitingForPlayerResponseAfterEvanTalk()
+    private IEnumerator WaitForEvanToFinishTalkingAboutCase()
+    {
+        // Wait until the boss voice audio finishes playing
+        while (evanTalkingAudioSource.isPlaying)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        // After the boss talk is complete, execute the next step
+        WaitingForCasefileTalk();
+    }
+
+    private void WaitingForCasefileTalk()
     {
         // Enable Interaction
         carKeys.layer = LayerMask.NameToLayer("Interact");
 
         // highlight effect on car keys
         keys.TurnHintOnWrapper();
+    }
+
+    public void PickingUpCase()
+    {
+         caseFileMat.TurnHintOff();
+         caseFile.layer = LayerMask.NameToLayer("Default");   
+        // Play car driving away audio
+        evanTalkingAudioSource.clip = CaseVO;
+        evanTalkingAudioSource.Play();
+
+        StartCoroutine(WaitForEvanToFinishTalkingAboutCase());
     }
 
     public void PickingUpCarKeys()
