@@ -16,6 +16,8 @@ public class DraggableObjectNew : MonoBehaviour
     [SerializeField] private Image draggableDisplayerImage;
     [SerializeField] private Sprite imageToDisplay;
     [SerializeField] private TMP_Text textField;
+    [SerializeField] private Animator murdererAnimator;
+    [SerializeField] private Animator murderWeaponAnimator;
 
     // Define the type of this draggable object
     public ItemTypeNew objectType;
@@ -121,11 +123,47 @@ public class DraggableObjectNew : MonoBehaviour
         }
     }
 
+    // Static references to track which object is controlling each animator
+    private static DraggableObjectNew activeMurderAnimatorController;
+    private static DraggableObjectNew activeMurderWeaponAnimatorController;
+
+    private void HandleAnimatorState(bool isPulsing)
+    {
+        // Determine the correct static controller for this object's type
+        if (objectType == ItemTypeNew.Murder && murdererAnimator != null)
+        {
+            // Only allow the active controller to update the animator
+            if (isPulsing)
+            {
+                activeMurderAnimatorController = this;
+            }
+            if (activeMurderAnimatorController == this)
+            {
+                murdererAnimator.SetBool("IsPulsing", isPulsing);
+            }
+        }
+        else if (objectType == ItemTypeNew.MurderWeapon && murderWeaponAnimator != null)
+        {
+            // Only allow the active controller to update the animator
+            if (isPulsing)
+            {
+                activeMurderWeaponAnimatorController = this;
+            }
+            if (activeMurderWeaponAnimatorController == this)
+            {
+                murderWeaponAnimator.SetBool("IsPulsing", isPulsing);
+            }
+        }
+
+        Debug.Log($"{gameObject.name} pulsing: {isPulsing}");
+    }
+
     private void Update()
     {
         if (isDragging)
         {
-            // Handle dragging logic
+            HandleAnimatorState(true); // Enable animation for the current object
+
             Vector3 targetPosition = GetMouseWorldPosition() + offset;
 
             if (dragBoundary != null)
@@ -135,7 +173,6 @@ public class DraggableObjectNew : MonoBehaviour
 
             transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
 
-            // Ensure the displayer is active during dragging
             if (currentUIController == this)
             {
                 DisplayDraggableDisplayer();
@@ -143,19 +180,35 @@ public class DraggableObjectNew : MonoBehaviour
         }
         else if (isHovering)
         {
-            // Ensure the displayer is active during hovering
-            if (currentUIController == this)
+            HandleAnimatorState(true); // Enable animation during hover
+
+            if (currentUIController == null || currentUIController == this)
             {
+                currentUIController = this;
                 DisplayDraggableDisplayer();
             }
         }
         else
         {
-            // If neither dragging nor hovering, stop displaying
+            HandleAnimatorState(false); // Stop animation when neither dragging nor hovering
+
             if (currentUIController == this)
             {
                 StopDisplayDraggableDisplayer();
                 currentUIController = null; // Release ownership
+            }
+        }
+
+        // Clear static ownership if no longer dragging or hovering
+        if (!isDragging && !isHovering)
+        {
+            if (activeMurderAnimatorController == this)
+            {
+                activeMurderAnimatorController = null;
+            }
+            if (activeMurderWeaponAnimatorController == this)
+            {
+                activeMurderWeaponAnimatorController = null;
             }
         }
     }
