@@ -10,6 +10,7 @@ public class BallRoller : MonoBehaviour
     //public Material dissolveMaterial;
     [SerializeField] private float waitRoll = 1;
     [SerializeField] public AudioClip ballRollingSound;
+    [SerializeField] public AudioClip laughingClip;
     [SerializeField] private bool isTriggered = false;
     [SerializeField] private DissolveController dissolveController;
 
@@ -60,6 +61,7 @@ public class BallRoller : MonoBehaviour
             // Play the sound
             audioSource.clip = ballRollingSound;
             audioSource.Play();
+            AudioSource.PlayClipAtPoint(laughingClip, transform.position, 0.4f);
             yield return null;
         }
     }
