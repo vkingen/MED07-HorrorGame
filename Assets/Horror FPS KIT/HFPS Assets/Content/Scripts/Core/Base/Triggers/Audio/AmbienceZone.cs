@@ -22,6 +22,8 @@ namespace HFPS.Systems
         private bool fadedOut;
         private bool fadedIn;
 
+        [SerializeField] private float timeSpentInZone;
+
         void Awake()
         {
             AmbienceSource = ScriptManager.Instance.AmbienceSource;
@@ -31,6 +33,7 @@ namespace HFPS.Systems
         {
             if (triggerEnter)
             {
+                timeSpentInZone += Time.deltaTime;
                 if (!fadedOut)
                 {
                     if (AmbienceSource.volume > 0.01f && !fadedOut)
