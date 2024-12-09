@@ -7,6 +7,8 @@ TagManager:
   - Flesh
   - Water
   - Zombie
+  - Draggable
+  - DropZone
   layers:
   - Default
   - TransparentFX
@@ -38,7 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Ball
   - 
   m_SortingLayers:
   - name: Default
