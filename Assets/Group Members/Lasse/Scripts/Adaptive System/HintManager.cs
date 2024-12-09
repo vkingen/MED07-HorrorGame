@@ -84,6 +84,7 @@ public class HintManager : MonoBehaviour
             {
                 if (!isPlayingAlternativeNotch && !alternativeNotchTimerActive)
                 {
+                    DataCollection.Instance.AlternativeNotchPlayed();
                     PlayAlternativeNotchVoiceLine();
                     ActivateAlternativeNotchTimer(true);
                     //playerProgressTracker.ResetTimer();

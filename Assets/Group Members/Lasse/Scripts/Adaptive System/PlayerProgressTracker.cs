@@ -19,10 +19,10 @@ public class PlayerProgressTracker : MonoBehaviour
     private void Update()
     {
         // DEBUG MODE - DELETE
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            whenGlobalTimerReachesZero.Invoke();
-        }
+        //if(Input.GetKeyDown(KeyCode.O))
+        //{
+        //    whenGlobalTimerReachesZero.Invoke();
+        //}
 
 
         globalTimer -= Time.deltaTime;
