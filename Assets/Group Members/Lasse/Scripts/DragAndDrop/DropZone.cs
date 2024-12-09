@@ -8,19 +8,31 @@ public class DropZone : MonoBehaviour
     // Track if this DropZone is occupied
     private DraggableObjectNew occupyingObject;
 
+    // Define the correct name of the draggable object for this DropZone
+    public string correctDraggableObjectName;
+
+    // Track if the correct object is placed in the DropZone
+    public bool IsCorrectObjectPlaced => occupyingObject != null && occupyingObject.name == correctDraggableObjectName;
+
+    // Property to check if the DropZone is occupied
     public bool IsOccupied => occupyingObject != null;
 
+    // Method to assign the occupying object
     public void SetOccupyingObject(DraggableObjectNew obj)
     {
         occupyingObject = obj;
+        Debug.Log($"{gameObject.name}: Occupied by {obj.name}");
+        Debug.Log($"{gameObject.name}: IsCorrectObjectPlaced = {IsCorrectObjectPlaced}");
     }
 
+    // Method to clear the occupying object
     public void ClearOccupyingObject()
     {
+        Debug.Log($"{gameObject.name}: Cleared occupation");
         occupyingObject = null;
     }
 
-    // Check if a DraggableObject's type matches this DropZone's type
+    // Method to check if a DraggableObject's type matches this DropZone's type
     public bool CanAcceptObject(DraggableObjectNew obj)
     {
         return obj.objectType == zoneType;

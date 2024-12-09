@@ -69,12 +69,12 @@ public class DraggableObjectNew : MonoBehaviour
     {
         if (draggableDisplayer != null && draggableDisplayer.activeSelf)
         {
-            Debug.Log($"{gameObject.name}: Stopping draggable displayer");
+            //Debug.Log($"{gameObject.name}: Stopping draggable displayer");
             draggableDisplayer.SetActive(false);
         }
         else
         {
-            Debug.Log($"{gameObject.name}: Draggable displayer already inactive");
+            //Debug.Log($"{gameObject.name}: Draggable displayer already inactive");
         }
     }
 
@@ -155,7 +155,7 @@ public class DraggableObjectNew : MonoBehaviour
             }
         }
 
-        Debug.Log($"{gameObject.name} pulsing: {isPulsing}");
+        //Debug.Log($"{gameObject.name} pulsing: {isPulsing}");
     }
 
     private void Update()
