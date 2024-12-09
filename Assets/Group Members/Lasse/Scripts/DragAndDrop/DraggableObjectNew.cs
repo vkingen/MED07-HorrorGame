@@ -22,6 +22,9 @@ public class DraggableObjectNew : MonoBehaviour
     // Define the type of this draggable object
     public ItemTypeNew objectType;
 
+    // Name of the weapon or clue related to this draggable object
+    [SerializeField] private string relatedWeaponName;
+
     // Boundary within which the object can be dragged
     public BoxCollider dragBoundary;
 
@@ -40,6 +43,73 @@ public class DraggableObjectNew : MonoBehaviour
     {
         mainCamera = Camera.main;
         originalPosition = transform.position; // Save original position in case we need to reset
+
+        if (objectType == ItemTypeNew.MurderWeapon)
+        {
+            // Check if the related weapon is found
+            if (DataCollection.Instance != null)
+            {
+                bool isWeaponFound = CheckWeaponStatus();
+                if (!isWeaponFound)
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
+    }
+
+    private bool CheckWeaponStatus()
+    {
+        // Log the current status of the weapons
+        Debug.Log($"Checking status for {relatedWeaponName}");
+
+        // Custom logic to handle the axe case
+        if (relatedWeaponName == "axeReal" || relatedWeaponName == "axeDrawing")
+        {
+            // If both axeRealFound and axeDrawingFound are true, keep axeRealFound and destroy axeDrawing
+            if (DataCollection.Instance.axeRealFound && DataCollection.Instance.axeDrawingFound)
+            {
+                Debug.Log("Both axeRealFound and axeDrawingFound are true. Keeping axeRealFound and destroying axeDrawing.");
+                // Destroy the axeDrawing object
+                DestroyGameObject("axeDrawing");
+                return true; // Return true because axeRealFound should stay
+            }
+        }
+
+        // Continue with regular weapon checks
+        switch (relatedWeaponName)
+        {
+            case "axeReal":
+                return DataCollection.Instance.axeRealFound;
+            case "axeDrawing":
+                return DataCollection.Instance.axeDrawingFound;
+            case "screwdriver":
+                return DataCollection.Instance.screwdriverFound;
+            case "pistol":
+                return DataCollection.Instance.pistolFound;
+            case "knife":
+                return DataCollection.Instance.knifeFound;
+            case "sledgehammer":
+                return DataCollection.Instance.sledgehammerFound;
+            default:
+                Debug.LogWarning("Unknown weapon name: " + relatedWeaponName);
+                return false;
+        }
+    }
+
+    private void DestroyGameObject(string weaponName)
+    {
+        // Iterate through all the draggable objects and destroy the one with the matching name
+        DraggableObjectNew[] draggableObjects = FindObjectsOfType<DraggableObjectNew>();
+        foreach (var draggable in draggableObjects)
+        {
+            if (draggable.relatedWeaponName == weaponName)
+            {
+                Debug.Log($"Destroying object: {draggable.gameObject.name} because {weaponName} is already found");
+                Destroy(draggable.gameObject);
+            }
+        }
     }
 
     private void OnMouseDown()
@@ -69,12 +139,7 @@ public class DraggableObjectNew : MonoBehaviour
     {
         if (draggableDisplayer != null && draggableDisplayer.activeSelf)
         {
-            //Debug.Log($"{gameObject.name}: Stopping draggable displayer");
             draggableDisplayer.SetActive(false);
-        }
-        else
-        {
-            //Debug.Log($"{gameObject.name}: Draggable displayer already inactive");
         }
     }
 
@@ -132,7 +197,6 @@ public class DraggableObjectNew : MonoBehaviour
         // Determine the correct static controller for this object's type
         if (objectType == ItemTypeNew.Murder && murdererAnimator != null)
         {
-            // Only allow the active controller to update the animator
             if (isPulsing)
             {
                 activeMurderAnimatorController = this;
@@ -144,7 +208,6 @@ public class DraggableObjectNew : MonoBehaviour
         }
         else if (objectType == ItemTypeNew.MurderWeapon && murderWeaponAnimator != null)
         {
-            // Only allow the active controller to update the animator
             if (isPulsing)
             {
                 activeMurderWeaponAnimatorController = this;
@@ -154,8 +217,6 @@ public class DraggableObjectNew : MonoBehaviour
                 murderWeaponAnimator.SetBool("IsPulsing", isPulsing);
             }
         }
-
-        //Debug.Log($"{gameObject.name} pulsing: {isPulsing}");
     }
 
     private void Update()

@@ -7,6 +7,9 @@ public class EventClue : MonoBehaviour
     //[SerializeField] private bool isClue = false;
     [SerializeField] private float timeToAdd;
     public UnityEvent firstTimeInteract;
+    
+
+
     private void Awake()
     {
         playerProgressTracker = FindObjectOfType<PlayerProgressTracker>();

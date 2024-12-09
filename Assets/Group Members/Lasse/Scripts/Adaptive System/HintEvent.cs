@@ -6,10 +6,15 @@ public class HintEvent : MonoBehaviour
     public string roomName;
     public bool isTriggered = false; // Flag to avoid retriggering
     public UnityEvent eventToTrigger;
+    [HideInInspector] public bool playerFoundClueByThemselves; 
 
     public void DeactiveEvent()
     {
-        isTriggered = true;
+        if(!isTriggered)
+        {
+            playerFoundClueByThemselves = true;
+            isTriggered = true;
+        }
     }
 
     public void TriggerEvent()

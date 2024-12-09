@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneType: 2
+  correctDraggableObjectName: 
 --- !u!65 &3096310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -682,8 +683,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 2
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -837,8 +845,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 1
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
@@ -1097,8 +1112,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 0
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -1339,6 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneType: 1
+  correctDraggableObjectName: 
 --- !u!65 &91928941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1578,8 +1601,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 0
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
@@ -2865,8 +2895,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 2
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
@@ -7684,6 +7721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneType: 0
+  correctDraggableObjectName: 
 --- !u!65 &1273381117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7834,8 +7872,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 1
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
@@ -8292,8 +8337,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 0
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -8792,8 +8844,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 2
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -9044,8 +9103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 1
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
@@ -9198,8 +9264,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 0
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -9353,8 +9426,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 0
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
@@ -10018,6 +10098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NoticeBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 9166859547065485345, guid: 0757af5f51fd1a94d974e1ab532a7571,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -10230,8 +10315,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 1
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -11000,8 +11092,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 2
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 10
   returnSpeed: 5
@@ -11244,8 +11343,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  descriptionText: 
+  draggableDisplayer: {fileID: 0}
+  draggableDisplayerImage: {fileID: 0}
+  imageToDisplay: {fileID: 0}
+  textField: {fileID: 0}
+  murdererAnimator: {fileID: 0}
+  murderWeaponAnimator: {fileID: 0}
   objectType: 2
+  relatedWeaponName: 
   dragBoundary: {fileID: 1770094798}
   followSpeed: 5
   returnSpeed: 5
