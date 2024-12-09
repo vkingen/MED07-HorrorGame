@@ -14,6 +14,8 @@ public class DataCollection : MonoBehaviour
 
     private static DataCollection instance;
 
+
+
     public static DataCollection Instance
     {
         get
