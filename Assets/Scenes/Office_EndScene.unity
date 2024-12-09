@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: AAAAAAAARRRRRRRRRRHHHHHHHHHHHHH!
+  descriptionText: A screwdriver found on a small cupboard inside the parlor.
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 14297ca6697dff24c84276b24f17fcd4, type: 3}
@@ -1472,7 +1472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: John er min ven
+  descriptionText: A drawing found in the living room suggested someone holding a
+    bloody axe.
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 8a64887034b470a40a573befac27a2ad, type: 3}
@@ -1987,7 +1988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: BabySam
+  descriptionText: Sam
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 320a44599ae1c664498d8d248f13c725, type: 3}
@@ -4643,7 +4644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: Ash Leee
+  descriptionText: Ashley
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 44a1d768e2d375d4d90565804b2a7d2d, type: 3}
@@ -4805,7 +4806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: "Skal du med p\xE5 grillen?"
+  descriptionText: A pistol found next to a skeleton in the pantry.
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 44424baa7930de742b153dd35ba663ed, type: 3}
@@ -10744,7 +10745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: "Skal du have med k\xF8dp\xF8lsen?"
+  descriptionText: A clean kitchen knife found on the table inside the kitchen.
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 8cb40c11828d76a4ebca7353669779b4, type: 3}
@@ -11886,7 +11887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: John er min ven
+  descriptionText: A big bloody axe found in the bedroom inside a wardrobe.
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 8a64887034b470a40a573befac27a2ad, type: 3}
@@ -13527,7 +13528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: Hvor er missekatten?
+  descriptionText: A big rusty sledgehammer found in the cellar near the playroom.
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: 63eaeb2d453542b4db5352045541c480, type: 3}
@@ -13777,7 +13778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3504f695d9e29f41a2d711be09b7a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: Bob Marley
+  descriptionText: Marley
   draggableDisplayer: {fileID: 2142830773}
   draggableDisplayerImage: {fileID: 564372231}
   imageToDisplay: {fileID: 21300000, guid: bbf1b094739f07043a8953907f089de2, type: 3}
