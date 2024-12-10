@@ -61,7 +61,7 @@ public class BallRoller : MonoBehaviour
             // Play the sound
             audioSource.clip = ballRollingSound;
             audioSource.Play();
-            AudioSource.PlayClipAtPoint(laughingClip, transform.position, 0.4f);
+            AudioSource.PlayClipAtPoint(laughingClip, transform.position, 0.08f);
             yield return null;
         }
     }
