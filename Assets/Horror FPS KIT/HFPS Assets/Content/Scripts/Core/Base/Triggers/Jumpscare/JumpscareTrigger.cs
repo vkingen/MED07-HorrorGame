@@ -6,6 +6,7 @@
 using UnityEngine;
 using ThunderWire.Utility;
 using HFPS.Player;
+using UnityEngine.Events;
 
 namespace HFPS.Systems
 {
@@ -14,6 +15,7 @@ namespace HFPS.Systems
 	/// </summary>
 	public class JumpscareTrigger : MonoBehaviour
 	{
+		public UnityEvent jumpscareEvent;
 		private JumpscareEffects effects;
 
 		[Header("Jumpscare Setup")]
@@ -81,7 +83,9 @@ namespace HFPS.Systems
 					}
 				}
 
-				isPlayed = true;
+                jumpscareEvent?.Invoke();
+
+                isPlayed = true;
 			}
 		}
 	}

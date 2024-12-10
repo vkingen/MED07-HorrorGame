@@ -865,11 +865,21 @@ namespace HFPS.Player
         {
             isExamining = false;
             gameManager.isExamining = false;
+
         }
 
         void DropObject()
         {
             Debug.Log("STOPPING EXAMENING");
+
+            // Fire events in ItemEvent upon examination
+            ItemEvent itemEvent = objectHeld.GetComponent<ItemEvent>();
+            if (itemEvent != null)
+            {
+                itemEvent.OnExamineCancelled(); // Call the method to fire events
+                itemEvent.cancelEventExecuted = true;
+            }
+
             PlayerProgressTracker tracker = FindFirstObjectByType<PlayerProgressTracker>();
             if (tracker != null)
             {
