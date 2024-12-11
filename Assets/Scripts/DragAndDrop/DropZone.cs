@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class DropZone : MonoBehaviour
@@ -6,13 +7,15 @@ public class DropZone : MonoBehaviour
     public ItemTypeNew zoneType;
 
     // Track if this DropZone is occupied
-    private DraggableObjectNew occupyingObject;
+    public DraggableObjectNew occupyingObject;
 
     // Define the correct name of the draggable object for this DropZone
-    public string correctDraggableObjectName;
+    public string[] correctDraggableObjectName;
 
     // Track if the correct object is placed in the DropZone
-    public bool IsCorrectObjectPlaced => occupyingObject != null && occupyingObject.name == correctDraggableObjectName;
+    public bool IsCorrectObjectPlaced =>
+        occupyingObject != null &&
+        correctDraggableObjectName.Contains(occupyingObject.name);
 
     // Property to check if the DropZone is occupied
     public bool IsOccupied => occupyingObject != null;

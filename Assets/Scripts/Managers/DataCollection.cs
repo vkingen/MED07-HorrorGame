@@ -17,6 +17,8 @@ public class DataCollection : MonoBehaviour
     private static DataCollection instance;
     private Dictionary<string, float> timeSpentInAreas = new Dictionary<string, float>();
 
+    public string murderSelected, murderWeaponSelected;
+
     public static DataCollection Instance
     {
         get { return instance; }
@@ -126,6 +128,10 @@ public class DataCollection : MonoBehaviour
 
             // Write alternative notch count
             writer.WriteLine("Alternative Notches Played," + alternativeNotchCount);
+
+            // Write end results
+            writer.WriteLine("Murder Selected," + (string.IsNullOrEmpty(murderSelected) ? "None" : murderSelected));
+            writer.WriteLine("Murder Weapon Selected," + (string.IsNullOrEmpty(murderWeaponSelected) ? "None" : murderWeaponSelected));
 
             // Write room times (rounded to integers without decimals)
             foreach (var entry in timeSpentInAreas)
