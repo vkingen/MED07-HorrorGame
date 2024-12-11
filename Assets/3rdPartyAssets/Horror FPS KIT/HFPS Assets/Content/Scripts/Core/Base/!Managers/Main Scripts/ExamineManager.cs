@@ -606,6 +606,7 @@ namespace HFPS.Player
             if (itemEvent != null)
             {
                 itemEvent.OnItemEvent(); // Call the method to fire events
+                itemEvent.eventExecuted = true;
             }
 
             isPaper = firstExamine.examineType == InteractiveItem.ExamineType.Paper;
