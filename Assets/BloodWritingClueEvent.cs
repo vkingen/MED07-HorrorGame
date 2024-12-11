@@ -9,7 +9,7 @@ public class BloodWritingClueEvent : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.U))
         {
-            Debug.Log("START WRITE");
+            //Debug.Log("START WRITE");
             PerformEvent();
         }
     }

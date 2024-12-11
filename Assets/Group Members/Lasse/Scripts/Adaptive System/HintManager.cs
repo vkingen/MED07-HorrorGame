@@ -59,14 +59,14 @@ public class HintManager : MonoBehaviour
                 ActivateAlternativeNotchTimer(false);
             }
             alternativeNotchTimerCurrent -= Time.deltaTime;
-            Debug.Log("State is: " + alternativeNotchTimerActive + " and current time is: " + alternativeNotchTimerCurrent);
+            //Debug.Log("State is: " + alternativeNotchTimerActive + " and current time is: " + alternativeNotchTimerCurrent);
         }
     }
 
     public void SetCurrentRoom(string roomName)
     {
         currentRoom = roomName;
-        Debug.Log($"Player is now in room: {currentRoom}");
+        //Debug.Log($"Player is now in room: {currentRoom}");
     }
 
     private void CheckForHintTrigger()

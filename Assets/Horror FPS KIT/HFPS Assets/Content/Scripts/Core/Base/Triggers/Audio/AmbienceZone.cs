@@ -22,7 +22,7 @@ namespace HFPS.Systems
         private bool fadedOut;
         private bool fadedIn;
 
-        [SerializeField] private float timeSpentInZone;
+        public float timeSpentInZone;
 
         void Awake()
         {

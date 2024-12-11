@@ -33,7 +33,7 @@ public class FlashlightFlickerClueEvent : MonoBehaviour
             //isFlickering = true;
 
 
-            Debug.Log("FLICKER");
+            //sDebug.Log("FLICKER");
             PerformEvent();
         }
     }

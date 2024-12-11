@@ -1,32 +1,29 @@
+using HFPS.Systems;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class DataCollection : MonoBehaviour
 {
+    [SerializeField] private bool testing;
+
     public bool axeRealFound, axeDrawingFound, screwdriverFound, pistolFound, knifeFound, sledgehammerFound;
 
-    private HintEvent[] hintEvents; // Keep this private
-    // Total of clues found
+    private HintEvent[] hintEvents;
     public int clueTriggered;
-
-    // Clues found by player
     public int clueFoundByPlayer;
     public int alternativeNotchCount;
 
     private static DataCollection instance;
-
-
+    private Dictionary<string, float> timeSpentInAreas = new Dictionary<string, float>();
 
     public static DataCollection Instance
     {
-        get
-        {
-            return instance;
-        }
+        get { return instance; }
     }
 
     private void Awake()
     {
-        // Ensure only one instance of the DataCollection exists
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -34,9 +31,8 @@ public class DataCollection : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject); // Persist this object across scenes
+        DontDestroyOnLoad(gameObject);
 
-        // Find all HintEvent objects in the scene and store them in the hintEvents array
         hintEvents = FindObjectsOfType<HintEvent>();
     }
 
@@ -49,51 +45,95 @@ public class DataCollection : MonoBehaviour
     {
         switch (name)
         {
-            case "axeReal":
-                axeRealFound = true;
-                break;
-            case "axeDrawing":
-                axeDrawingFound = true;
-                break;
-            case "screwdriver":
-                screwdriverFound = true;
-                break;
-            case "pistol":
-                pistolFound = true;
-                break;
-            case "knife":
-                knifeFound = true;
-                break;
-            case "sledgehammer":
-                sledgehammerFound = true;
-                break;
-            default:
-                Debug.LogWarning("Weapon name not recognized: " + name);
-                break;
+            case "axeReal": axeRealFound = true; break;
+            case "axeDrawing": axeDrawingFound = true; break;
+            case "screwdriver": screwdriverFound = true; break;
+            case "pistol": pistolFound = true; break;
+            case "knife": knifeFound = true; break;
+            case "sledgehammer": sledgehammerFound = true; break;
+            default: Debug.LogWarning("Weapon name not recognized: " + name); break;
         }
     }
-
-    // ---------------------------------- End Game Data Collection --------------------------------
 
     public void CollectData()
     {
         CollectCluesFoundByPlayer();
+        CollectRoomTimes();
     }
 
     public void CollectCluesFoundByPlayer()
     {
-        clueFoundByPlayer = 0; // Reset to prevent double counting
-        clueTriggered = 0; // Reset to prevent double counting
+        clueFoundByPlayer = 0;
+        clueTriggered = 0;
         foreach (HintEvent item in hintEvents)
         {
-            if(item.isTriggered)
+            if (item.isTriggered) clueTriggered++;
+            if (item.playerFoundClueByThemselves) clueFoundByPlayer++;
+        }
+    }
+
+    private void CollectRoomTimes()
+    {
+        RoomTrigger[] roomTriggers = FindObjectsOfType<RoomTrigger>();
+
+        foreach (var roomTrigger in roomTriggers)
+        {
+            string objectName = roomTrigger.roomName;
+            if (!timeSpentInAreas.ContainsKey(objectName))
             {
-                clueTriggered++;
+                timeSpentInAreas.Add(objectName, 0f);
             }
-            if (item.playerFoundClueByThemselves)
+
+            AmbienceZone zone = roomTrigger.GetComponent<AmbienceZone>();
+            if (zone != null)
             {
-                clueFoundByPlayer++;
+                timeSpentInAreas[objectName] += zone.timeSpentInZone;
             }
         }
+    }
+
+    public void ExportToCSV()
+    {
+        if (testing) return;
+
+        string filePath = Path.Combine(Application.dataPath, "GameData_001.csv");
+
+        // Check if the file already exists, and if so, increment the filename
+        int fileIndex = 1;
+        while (File.Exists(filePath))
+        {
+            // Generate new file name with iteration (e.g., GameData_001.csv, GameData_002.csv, etc.)
+            filePath = Path.Combine(Application.dataPath, $"GameData_{fileIndex:D3}.csv");
+            fileIndex++;
+        }
+
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            // Write header row
+            writer.WriteLine("Category,Value");
+
+            // Write weapons found
+            writer.WriteLine("Axe Real Found," + axeRealFound);
+            writer.WriteLine("Axe Drawing Found," + axeDrawingFound);
+            writer.WriteLine("Screwdriver Found," + screwdriverFound);
+            writer.WriteLine("Pistol Found," + pistolFound);
+            writer.WriteLine("Knife Found," + knifeFound);
+            writer.WriteLine("Sledgehammer Found," + sledgehammerFound);
+
+            // Write clue data
+            writer.WriteLine("Clues Triggered," + clueTriggered);
+            writer.WriteLine("Clues Found by Player," + clueFoundByPlayer);
+
+            // Write alternative notch count
+            writer.WriteLine("Alternative Notches Played," + alternativeNotchCount);
+
+            // Write room times (rounded to integers without decimals)
+            foreach (var entry in timeSpentInAreas)
+            {
+                int roundedTime = Mathf.RoundToInt(entry.Value); // Round the time spent to the nearest whole number
+                writer.WriteLine($"Time Spent in {entry.Key}," + roundedTime);
+            }
+        }
+        Debug.Log($"Data exported to {filePath}");
     }
 }

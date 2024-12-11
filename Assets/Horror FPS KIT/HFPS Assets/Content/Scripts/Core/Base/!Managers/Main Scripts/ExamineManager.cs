@@ -870,7 +870,7 @@ namespace HFPS.Player
 
         void DropObject()
         {
-            Debug.Log("STOPPING EXAMENING");
+            //Debug.Log("STOPPING EXAMENING");
 
             // Fire events in ItemEvent upon examination
             ItemEvent itemEvent = objectHeld.GetComponent<ItemEvent>();
