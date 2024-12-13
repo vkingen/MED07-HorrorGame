@@ -32,7 +32,7 @@ public class InteractiveTV : MonoBehaviour
         audioSource.Play();
         lightEffect.SetActive(isOn);
     }
-    private void TurnOff()
+    public void TurnOff()
     {
         isOn = false;
         videoPlayer.GetComponent<MeshRenderer>().material = offMaterial;
