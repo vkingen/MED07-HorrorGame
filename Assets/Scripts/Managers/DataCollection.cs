@@ -76,17 +76,17 @@ public class DataCollection : MonoBehaviour
 
     private void CollectRoomTimes()
     {
-        RoomTrigger[] roomTriggers = FindObjectsOfType<RoomTrigger>();
+        TimeSpentInRoom[] rooms = FindObjectsOfType<TimeSpentInRoom>();
 
-        foreach (var roomTrigger in roomTriggers)
+        foreach (var room in rooms)
         {
-            string objectName = roomTrigger.roomName;
+            string objectName = room.roomName;
             if (!timeSpentInAreas.ContainsKey(objectName))
             {
                 timeSpentInAreas.Add(objectName, 0f);
             }
 
-            AmbienceZone zone = roomTrigger.GetComponent<AmbienceZone>();
+            TimeSpentInRoom zone = room.GetComponent<TimeSpentInRoom>();
             if (zone != null)
             {
                 timeSpentInAreas[objectName] += zone.timeSpentInZone;

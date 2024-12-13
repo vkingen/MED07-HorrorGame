@@ -22,7 +22,7 @@ namespace HFPS.Systems
         private bool fadedOut;
         private bool fadedIn;
 
-        public float timeSpentInZone;
+        //public float timeSpentInZone;
 
         void Awake()
         {
@@ -33,7 +33,7 @@ namespace HFPS.Systems
         {
             if (triggerEnter)
             {
-                timeSpentInZone += Time.deltaTime;
+                //timeSpentInZone += Time.deltaTime;
                 if (!fadedOut)
                 {
                     if (AmbienceSource.volume > 0.01f && !fadedOut)
